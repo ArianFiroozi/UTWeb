@@ -13,11 +13,14 @@ function UTNavbar () {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary ut-navbar">
       <Container>
-        <Navbar.Brand href="#home">UTCar</Navbar.Brand>
+        <Navbar.Brand href="#home" className="white">UTCar</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+          <Nav  className="white">
             <Link to="/">{t("home")}</Link>
+          </Nav>
+          <Nav className="me-auto">
+            <Link to="/projects">{t("projects")}</Link>
           </Nav>
           <Nav>
             <Link to="/about">{t("about")}</Link>

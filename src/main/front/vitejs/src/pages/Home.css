@@ -16,3 +16,9 @@ footer p {
     left: 0;
     min-height: 300px;
 }
+
+.caption-carousel {
+  text-align: left !important;
+  left: auto; /* override Bootstrap */
+  background-color: red;
+}
