@@ -1,0 +1,43 @@
+/* Example styles for your navbar */
+.first-color {
+	background: #233142;
+}
+
+.second-color {
+	background: #455d7a;
+}
+
+.third-color {
+	background: #f95959;
+}
+
+.fourth-color {
+	background: #e3e3e3;
+}
+
+.ut-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #e3e3e3 !important;
+}
+
+.lang-btn {
+  background-color: #455d7a;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.lang-btn:hover {
+  background-color: #e3e3e3;
+}
+
+link-color {
+    color: red;
+    background-color: red;
+}
