@@ -86,21 +86,6 @@ const Home = () => {
         </Row>
       </Container>
 
-      <footer className="bg-dark text-light py-4">
-        <Container>
-          <Row>
-            <Col md={6}>
-              <h5>{t("footernote")}</h5>
-              <p>{t("footernote")}</p>
-            </Col>
-            <Col md={6} className="text-md-end">
-              <p>{t("emailstr")}: {t("email")}</p>
-              <p>{t("phonestr")}: {t("phone")}</p>
-              <p>{t("addressstr")}: {t("address")}</p>
-            </Col>
-          </Row>
-        </Container>
-      </footer>
     </div>
   );
 };

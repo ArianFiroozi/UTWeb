@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import UTNavbar from "./components/UTNavbar";
+import UTFooter from "./components/UTFooter";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/projects";
@@ -15,6 +16,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
         </Routes>
       </div>
+      <UTFooter />
     </BrowserRouter>
   );
 }
