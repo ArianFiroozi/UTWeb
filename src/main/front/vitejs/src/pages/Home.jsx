@@ -6,6 +6,7 @@ import img1 from "../assets/utcar1.jpg";
 import img2 from "../assets/utcar2.png";
 import img3 from "../assets/utcar3.png";
 import img4 from "../assets/utcar4.png";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const { t, lang } = useI18n();
@@ -55,6 +56,8 @@ const Home = () => {
     },
   ];
 
+  const navigate = useNavigate();
+
   return (
     <div dir={lang === "fa" ? "rtl" : "ltr"}>
       <Carousel interval={5000}>
@@ -73,7 +76,7 @@ const Home = () => {
         <Row className="g-4">
           {flashcards.map((card, idx) => (
             <Col key={idx} md={4}>
-              <Card className="h-100 text-center shadow-sm d-flex flex-column">
+              <Card className="h-100 text-center shadow-sm d-flex flex-column" style={{ backgroundColor: '#ffffffe5' }}>
                 <Card.Body className="d-flex flex-column">
                   <Card.Title className="d-flex align-items-center justify-content-center">
                     <span className="me-2">{card.icon}</span>
@@ -81,7 +84,7 @@ const Home = () => {
                   </Card.Title>
                   <Card.Text className="mb-4">{card.text}</Card.Text>
                   <div className="mt-auto">
-                    <Button variant="primary">{t("learnmore")}</Button>
+                    <Button variant="primary" onClick={() => navigate("/projects")}>{t("learnmore")}</Button>
                   </div>
                 </Card.Body>
               </Card>

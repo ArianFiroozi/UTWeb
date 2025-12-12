@@ -52,7 +52,7 @@ export default function Projects() {
           </TimelineSeparator>
 
           <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 }}>
+            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5'}}>
               <img
                 src={img1}
                 alt="Decision Making"
@@ -85,7 +85,7 @@ export default function Projects() {
           </TimelineSeparator>
 
           <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 }}>
+            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5'}}>
               <img
                 src={img2}
                 alt="Simulation"
@@ -112,7 +112,7 @@ export default function Projects() {
           </TimelineSeparator>
 
           <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 }}>
+            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5'}}>
               <img
                 src={img3}
                 alt="Sensors"
@@ -139,7 +139,7 @@ export default function Projects() {
           </TimelineSeparator>
 
           <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 }}>
+            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5'}}>
               <img
                 src={img4}
                 alt="Hardware"

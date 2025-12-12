@@ -1,7 +1,7 @@
 
 h2 {
   font-weight: 700;
-  color: #798897; /* dark gray */
+  color: White; /* dark gray */
   font-size: 2rem;
 }
 
@@ -9,8 +9,9 @@ h2 {
 p.lead {
   font-size: 1.125rem;
   line-height: 1.8;
-  color: white; /* secondary text color */
+  color: rgb(198, 193, 207) !important; /* secondary text color */
   margin-bottom: 1.5rem;
+  text-align: justify;
 }
 
 /* Image styling */

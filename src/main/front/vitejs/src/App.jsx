@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import UTNavbar from "./components/UTNavbar";
 import UTFooter from "./components/UTFooter";
 import Home from "./pages/Home";
@@ -22,6 +22,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/people" element={<People />} />
+
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
       <UTFooter />

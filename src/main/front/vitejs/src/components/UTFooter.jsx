@@ -5,24 +5,32 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {Link} from 'react-router-dom'
 import { Card, Row, Col, Button, Carousel } from "react-bootstrap";
+import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 
 import './UTNavbar.css';
 
 function UTFooter () {
-  const { t, toggleLang } = useI18n();
+  const { t, toggleLang , lang} = useI18n();
 
   return (
       <footer className="bg-dark text-light py-4">
-        <Container>
+        <Container dir = {lang==="fa"?"rtl":"ltr"}>
           <Row>
             <Col md={6}>
               <h5>{t("footernote")}</h5>
               <p>{t("footernote")}</p>
             </Col>
-            <Col md={6} className="text-md-end">
-              <p>{t("emailstr")}: {t("email")}</p>
-              <p>{t("phonestr")}: {t("phone")}</p>
-              <p>{t("addressstr")}: {t("address")}</p>
+            <Col md={6} className={lang==="fa"?"text-md-start" :"text-md-end"} dir = {lang==="fa"?"ltr":"rtl"}>
+                <p>
+                  <MdEmail /> {t("email")}
+                </p>
+                <p>
+                  <MdPhone /> {t("phone")}
+                </p>
+                <p>
+                  <MdLocationOn /> {t("address")}
+                </p>
+
             </Col>
           </Row>
         </Container>

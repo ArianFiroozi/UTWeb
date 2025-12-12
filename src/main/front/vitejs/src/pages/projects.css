@@ -5,6 +5,10 @@
   max-width: 900px;
 }
 
+.timeline-item.content.paper {
+    background-color: '#f0f0f0';
+}
+
 .timeline:before {
   content: "";
   position: absolute;

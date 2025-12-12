@@ -17,7 +17,15 @@ const About = () => {
     <Container className="my-5" dir={isRtl ? "rtl" : "ltr"}>
       <hr/>
       &nbsp;
-      <Row className={`align-items-center ${isRtl ? "flex-row-reverse" : ""}`}>
+      <Row className={`align-items-center ${isRtl ? "flex-col-reverse" : ""}`}>
+        <Col md={6}>
+          <h2 className="mb-4">{t("aboutTitle")}</h2>
+          {paragraphs.map((para, index) => (
+            <p key={index} className="lead text-secondary aboutpar">
+              {para}
+            </p>
+          ))}
+        </Col>
         <Col md={6} className="mb-4 mb-md-0">
           <Image
             src={img1}
@@ -26,14 +34,6 @@ const About = () => {
             rounded
             className={`shadow-sm ${isRtl ? "img-rtl" : ""}`}
           />
-        </Col>
-        <Col md={6}>
-          <h2 className="mb-4">{t("aboutTitle")}</h2>
-          {paragraphs.map((para, index) => (
-            <p key={index} className="lead text-secondary">
-              {para}
-            </p>
-          ))}
         </Col>
       </Row>
     </Container>

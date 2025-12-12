@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Modal from "react-bootstrap/Modal";
+import { useI18n } from "../i18n/I18nContext";
 
 import "./people.css"
 const members = [
@@ -86,23 +87,24 @@ export default function LabMembersPage() {
 
   const handleCardClick = (person) => setSelectedPerson(person);
   const handleClose = () => setSelectedPerson(null);
+  const { t, lang } = useI18n();
 
   return (
     <div className="container-fluid py-5 px-5" style={{ maxWidth: "1200px" }}>
       <hr />
       <div style={{ height: "30px" }}></div>
-      <h1 className="text-center mb-5">Our Lab Members</h1>
+      <h1 className="text-center mb-5">{t("ourlabmem")}</h1>
 
       {members.map((section, index) => (
         <div key={index} className="mb-5">
-          <h2 className="mb-4 text-primary text-center">{section.project}</h2>
+          <h2 className="mb-4 text-primary text-center">{t(section.project)}</h2>
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center">
             {section.people.map((person, idx) => (
               <div className="col" key={idx}>
                 <div
                   className="card shadow-sm h-100 border-0 rounded-4"
                   onClick={() => handleCardClick(person)}
-                  style={{ cursor: "pointer" }}
+                  style={{ cursor: "pointer", backgroundColor:'#ffffffe5' }}
                 >
                   <img
                     src={person.photo}
@@ -126,15 +128,15 @@ export default function LabMembersPage() {
         centered
         size="lg"
       >
-        <Modal.Body className="text-center p-4">
+        <Modal.Body className="text-center p-4" style={{backgroundColor: '#ffffffe5', borderRadius:"10px"}}> 
           {selectedPerson && (
             <>
               <img
                 src={selectedPerson.photo}
                 alt={selectedPerson.name}
-                style={{ width: "100%", height: "auto", borderRadius: "12px" }}
+                style={{ width: "100%", height: "auto", borderRadius: "12px"}}
               />
-              <h2 className="mt-4">{selectedPerson.name}</h2>
+              <h2 className="mt-4" style={{color: '#1f1f1fe5'}}>{selectedPerson.name}</h2>
               <p className="text-muted">{selectedPerson.role}</p>
             </>
           )}
