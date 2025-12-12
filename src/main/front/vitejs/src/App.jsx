@@ -5,8 +5,13 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/projects";
 import People from "./pages/people";
+import React, { useEffect } from "react";
 
 function App() {
+    useEffect(() => {
+    document.title = "UTCar";
+  }, []);
+
   return (
     <BrowserRouter>
       <UTNavbar />
