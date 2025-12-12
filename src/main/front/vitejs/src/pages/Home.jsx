@@ -60,6 +60,8 @@ const Home = () => {
 
   return (
     <div dir={lang === "fa" ? "rtl" : "ltr"}>
+      &nbsp;
+      <hr/>
       <Carousel interval={5000}>
         {slides.map((slide, idx) => (
           <Carousel.Item key={idx}>
