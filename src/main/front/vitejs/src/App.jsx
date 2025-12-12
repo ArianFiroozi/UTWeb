@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Projects from "./pages/projects";
 import People from "./pages/people";
 import React, { useEffect } from "react";
+import "./App.css"
 
 function App() {
     useEffect(() => {
@@ -15,14 +16,7 @@ function App() {
   return (
     <BrowserRouter>
       <UTNavbar />
-      <div style={{
-            padding: 0,
-            display: "flex",
-            flex: 1,
-            width: "100vw",
-            minHeight: "100vh",
-            overflowX: "hidden"
-            }}>
+      <div className="mwrapper">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
