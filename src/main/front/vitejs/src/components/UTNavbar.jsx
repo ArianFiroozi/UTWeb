@@ -6,18 +6,18 @@ import { Link } from "react-router-dom";
 import "./UTNavbar.css";
 
 export default function UTNavbar() {
-  const { t, toggleLang } = useI18n();
+  const { t, toggleLang, lang } = useI18n();
 
   return (
     <Navbar expand="lg" className="ut-navbar shadow-sm" sticky="top">
-      <Container className="d-flex align-items-center">
+      <Container className="d-flex align-items-center" dir={lang==="fa"?"rtl": "ltr"}>
         <Navbar.Brand as={Link} to="/" className="fw-bold text-white">
           UTCar
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="nav" className="border-0 custom-toggler" />
 
-        <Navbar.Collapse id="nav" className="justify-content-end">
+        <Navbar.Collapse id="nav" className={lang==="fa"?"justify-content-end": "justify-content-end"} dir={lang==="fa"?"rtl": "ltr"}>
           <Nav className="align-items-center gap-3">
             <Link className="nav-link custom-link" to="/">
               {t("home")}
