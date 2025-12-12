@@ -63,7 +63,7 @@ const Home = () => {
     <div dir={lang === "fa" ? "rtl" : "ltr"} className="containerw">
       &nbsp;
       <hr/>
-      <Carousel interval={50000}>
+      <Carousel interval={5000}>
         {slides.map((slide, idx) => (
           <Carousel.Item key={idx}>
             <img className={slide.className} src={slide.img} alt={`Slide ${idx + 1}`} />
