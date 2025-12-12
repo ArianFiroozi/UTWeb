@@ -29,9 +29,11 @@ export default function Projects() {
     <Box sx={{ maxWidth: '900px', margin: '0 auto', mt: 5 ,position:'flex'}} dir={lang==="fa"? "rtl":"ltr"}>
         <hr/>
         &nbsp;
-      <Typography variant="h3" textAlign="center" mb={5} fontWeight="bold">
+      {/* <Typography variant="h3" textAlign="center" mb={5} fontWeight="bold"> */}
+      <h1 className="text-center mb-5">
         {t("ourproj")}
-      </Typography>
+        </h1>
+      {/* </Typography> */}
 
       <Timeline position="alternate">
 
@@ -52,7 +54,16 @@ export default function Projects() {
           </TimelineSeparator>
 
           <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5'}}>
+            <Paper
+                  elevation={3}
+                  sx={{
+                    p: 2,
+                    borderRadius: 3,
+                    backgroundColor: '#ffffffe5',
+                    textAlign: "start"
+                  }}
+                >
+
               <img
                 src={img1}
                 alt="Decision Making"
@@ -85,7 +96,7 @@ export default function Projects() {
           </TimelineSeparator>
 
           <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5'}}>
+            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "end"}}>
               <img
                 src={img2}
                 alt="Simulation"
@@ -112,7 +123,7 @@ export default function Projects() {
           </TimelineSeparator>
 
           <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5'}}>
+            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "start"}}>
               <img
                 src={img3}
                 alt="Sensors"
@@ -139,7 +150,7 @@ export default function Projects() {
           </TimelineSeparator>
 
           <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5'}}>
+            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "end"}}>
               <img
                 src={img4}
                 alt="Hardware"
