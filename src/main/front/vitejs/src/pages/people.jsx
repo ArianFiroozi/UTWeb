@@ -11,37 +11,37 @@ const members = [
       {
         name: "Dr. Mehdi Modarressi",
         role: "Supervisor",
-        photo: "https://picsum.photos/300/400"
+        photo: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg"
       },
       {
         name: "Hatef Rezaee",
         role: "Lead Researcher",
-        photo: "https://picsum.photos/300/400"
+        photo: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg"
       },
       {
         name: "M. Sepehr Bazargan",
         role: "Koskhol 1",
-        photo: "https://picsum.photos/300/400"
+        photo: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg"
       },
       {
         name: "Sepehr Jamali",
         role: "Koskhol 2",
-        photo: "https://picsum.photos/300/400"
+        photo: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg"
       },
       {
         name: "Arian Firoozi",
         role: "Koskhol 3",
-        photo: "https://picsum.photos/300/400"
+        photo: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg"
       },
       {
         name: "Sobhan Abedi",
         role: "Koskhol 4",
-        photo: "https://picsum.photos/300/400"
+        photo: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg"
       },
       {
         name: "Erfan Daraee",
         role: "Koskhol 5",
-        photo: "https://picsum.photos/300/400"
+        photo: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg"
       },
     ]
   },
@@ -51,32 +51,32 @@ const members = [
       {
         name: "Sohrab Moradi",
         role: "Lead Researcher",
-        photo: "https://picsum.photos/300/400"
+        photo: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg"
       },
       {
         name: "Mohammad Reza M. Hashemi",
         role: "AI Researcher",
-        photo: "https://picsum.photos/300/400"
+        photo: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg"
       },
       {
         name: "Amir TJ",
         role: "Cheater",
-        photo: "https://picsum.photos/300/400"
+        photo: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg"
       },
       {
         name: "Sara Gity",
         role: "Hardware",
-        photo: "https://picsum.photos/300/400"
+        photo: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg"
       },
       {
         name: "Mahsa Aghdam",
         role: "Web",
-        photo: "https://picsum.photos/300/400"
+        photo: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg"
       },
       {
         name: "Mohammadreza Vali",
         role: "AI Researcher",
-        photo: "https://picsum.photos/300/400"
+        photo: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg"
       },
     ]
   }

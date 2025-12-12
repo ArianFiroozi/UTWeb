@@ -11,22 +11,26 @@ const Home = () => {
   const { t, lang } = useI18n();
 
   const slides = [
-    {
+    { 
+      className:"d-block w-100 carousel-img",
       img: img1,
       title: t("utcar"),
       text: t("aboututcar"),
     },
-    {
+    { 
+      className:"d-block w-100 carousel-img",
       img: img2,
       title: t("utcar"),
       text: t("aboututcar"),
     },
-    {
+    { 
+      className:"d-block w-100 carousel-img",
       img: img3,
       title: t("utcar"),
       text: t("aboututcar"),
     },
     {
+      className:"d-block w-100 carousel-img",
       img: img4,
       title: t("utcar"),
       text: t("aboututcar"),
@@ -56,7 +60,7 @@ const Home = () => {
       <Carousel interval={5000}>
         {slides.map((slide, idx) => (
           <Carousel.Item key={idx}>
-            <img className="d-block w-100" src={slide.img} alt={`Slide ${idx + 1}`} />
+            <img className={slide.className} src={slide.img} alt={`Slide ${idx + 1}`} />
             <Carousel.Caption className="caption-carousel">
               <h1>{slide.title}</h1>
               <h3>{slide.text}</h3>

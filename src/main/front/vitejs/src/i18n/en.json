@@ -1,0 +1,26 @@
+{
+    "home": "Home",
+    "about": "About",
+    "switch": "Farsi",
+    "welcome": "Welcome to the Home Page!",
+    "aboutText": "This is the About Page.",
+    "aboutenv": "Electric and eco-friendly vehicle design.",
+    "aboutsensor": "High-precision sensors and AI-driven decision making.",
+    "aboutinno": "Cutting-edge autonomous technology for safer roads.",
+    "innovation": "Innovation",
+    "env": "Sustainability",
+    "sensor": "AI & Sensors",
+    "utcar": "UTCar for Autonomous Driving",
+    "aboututcar":"something in the air",
+    "learnmore": "Learn More",
+    "address":"somewhere in Tehran, Iran",
+    "email":"email@gmail.com",
+    "phone": "0-123432",
+    "footernote":"footer note",
+    "phonestr": "Phone",
+    "addressstr": "Address",
+    "emailstr": "E-mail",
+
+    "projects":"Projects",
+    "members":"Our People"
+  }

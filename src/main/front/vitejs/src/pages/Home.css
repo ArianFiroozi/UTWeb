@@ -22,3 +22,9 @@ footer p {
   left: auto; /* override Bootstrap */
   background-color: red;
 }
+
+.carousel-img {
+  height: 100vh;
+  width: 150% !important;
+  object-fit: cover;
+}
