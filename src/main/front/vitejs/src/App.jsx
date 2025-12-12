@@ -21,6 +21,7 @@ function App() {
             flex: 1,
             width: "100vw",
             minHeight: "100vh",
+            overflowX: "hidden"
             }}>
         <Routes>
           <Route path="/" element={<Home />} />

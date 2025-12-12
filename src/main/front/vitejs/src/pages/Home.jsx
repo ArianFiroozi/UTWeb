@@ -7,6 +7,7 @@ import img2 from "../assets/utcar2.png";
 import img3 from "../assets/utcar3.png";
 import img4 from "../assets/utcar4.png";
 import { useNavigate } from "react-router-dom";
+import "./Home.css"
 
 const Home = () => {
   const { t, lang } = useI18n();
@@ -59,10 +60,10 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div dir={lang === "fa" ? "rtl" : "ltr"}>
+    <div dir={lang === "fa" ? "rtl" : "ltr"} className="containerw">
       &nbsp;
       <hr/>
-      <Carousel interval={5000}>
+      <Carousel interval={50000}>
         {slides.map((slide, idx) => (
           <Carousel.Item key={idx}>
             <img className={slide.className} src={slide.img} alt={`Slide ${idx + 1}`} />
