@@ -9,6 +9,8 @@ import TimelineDot from '@mui/lab/TimelineDot';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
+import { useI18n } from "../i18n/I18nContext";
+
 
 import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
@@ -21,12 +23,14 @@ import img3 from "../assets/utcar3.png";
 import img4 from "../assets/utcar4.png";
 
 export default function Projects() {
+    const { t, lang } = useI18n();
+  
   return (
-    <Box sx={{ maxWidth: '900px', margin: '0 auto', mt: 5 ,position:'flex'}}>
+    <Box sx={{ maxWidth: '900px', margin: '0 auto', mt: 5 ,position:'flex'}} dir={lang==="fa"? "rtl":"ltr"}>
         <hr/>
         &nbsp;
       <Typography variant="h3" textAlign="center" mb={5} fontWeight="bold">
-        Our Projects
+        {t("ourproj")}
       </Typography>
 
       <Timeline position="alternate">
@@ -56,10 +60,10 @@ export default function Projects() {
               />
 
               <Typography variant="h6" mt={2}>
-                Decision Making
+                {t("decisionmakingstr")}
               </Typography>
               <Typography>
-                Developing intelligent decision-making algorithms for autonomous systems.
+                {t("decisionmaking")}
               </Typography>
             </Paper>
           </TimelineContent>
@@ -88,10 +92,10 @@ export default function Projects() {
                 style={{ width: "100%", borderRadius: "10px" }}
               />
               <Typography variant="h6" mt={2}>
-                Simulation
+                {t("simulationstr")}
               </Typography>
               <Typography>
-                Creating virtual environments to test robot behavior and system performance.
+                {t("simulation")}
               </Typography>
             </Paper>
           </TimelineContent>
@@ -115,10 +119,10 @@ export default function Projects() {
                 style={{ width: "100%", borderRadius: "10px" }}
               />
               <Typography variant="h6" mt={2}>
-                Sensor Integration
+                {t("sensorstr")}
               </Typography>
               <Typography>
-                Integrating cameras, IMUs, LIDAR and other sensors for real-time data collection.
+                {t("sensorp")}
               </Typography>
             </Paper>
           </TimelineContent>
@@ -142,10 +146,10 @@ export default function Projects() {
                 style={{ width: "100%", borderRadius: "10px" }}
               />
               <Typography variant="h6" mt={2}>
-                Hardware
+                {t("hardwarestr")}
               </Typography>
               <Typography>
-                Assembling electronics, mechanical parts, and embedded systems into final robots.
+                {t("hardware")}
               </Typography>
             </Paper>
           </TimelineContent>

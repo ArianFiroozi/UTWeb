@@ -3,7 +3,8 @@
     "about": "About",
     "switch": "Farsi",
     "welcome": "Welcome to the Home Page!",
-    "aboutText": "This is the About Page.",
+    "aboutText": "UTCar is a pioneering automotive research and innovation platform dedicated to developing sustainable and cutting-edge vehicle technologies. Our team of engineers and researchers work collaboratively to design innovative solutions that push the boundaries of performance, safety, and environmental responsibility.\nWe strive to create vehicles that are not only efficient and technologically advanced but also accessible and user-friendly. Through rigorous testing, community engagement, and continuous learning, UTCar aims to shape the future of transportation and inspire the next generation of automotive enthusiasts.",
+
     "aboutenv": "Electric and eco-friendly vehicle design.",
     "aboutsensor": "High-precision sensors and AI-driven decision making.",
     "aboutinno": "Cutting-edge autonomous technology for safer roads.",
@@ -23,5 +24,19 @@
 
     "projects":"Projects",
     "members":"Our People",
-    "aboutTitle": "About UTCar"
+    "aboutTitle": "About UTCar",
+
+    "decisionmaking": "Developing intelligent decision-making algorithms for autonomous systems.",
+    "decisionmakingstr": "Decision Making",
+
+    "simulation": "Creating virtual environments to test robot behavior and system performance.",
+    "simulationstr": "Simulation",
+
+    "sensorp": "Integrating cameras, IMUs, LIDAR and other sensors for real-time data collection.",
+    "sensorstr": "Sensor Integration",
+    "hardware": "Assembling electronics, mechanical parts, and embedded systems into final robots.",
+    "hardwarestr": "Hardware",
+
+    "ourproj": "Our Projects"
+
   }

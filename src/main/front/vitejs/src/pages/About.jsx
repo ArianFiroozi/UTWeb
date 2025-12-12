@@ -15,6 +15,8 @@ const About = () => {
   return (
     // <div dir={lang === "fa" ? "rtl" : "ltr"}>
     <Container className="my-5" dir={isRtl ? "rtl" : "ltr"}>
+      <hr/>
+      &nbsp;
       <Row className={`align-items-center ${isRtl ? "flex-row-reverse" : ""}`}>
         <Col md={6} className="mb-4 mb-md-0">
           <Image
