@@ -22,6 +22,9 @@ function UTNavbar () {
           <Nav className="me-auto">
             <Link to="/projects">{t("projects")}</Link>
           </Nav>
+          <Nav className="me-auto">
+            <Link to="/people">{t("members")}</Link>
+          </Nav>
           <Nav>
             <Link to="/about">{t("about")}</Link>
             <button onClick={toggleLang} className="lang-btn">{t("switch")}</button>

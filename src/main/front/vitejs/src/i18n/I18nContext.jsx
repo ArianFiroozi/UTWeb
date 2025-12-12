@@ -24,7 +24,8 @@ const translations = {
     addressstr: "Address",
     emailstr: "E-mail",
 
-    projects:"Projects"
+    projects:"Projects",
+    members:"Our People"
   },
   fa: {
     home: "خونه",
@@ -50,7 +51,8 @@ const translations = {
     addressstr: "نشانی",
     emailstr: "ایمیل",
 
-    projects: "پروژه های ما"
+    projects: "پروژه های ما",
+    members: "اعضا",
   },
 };
 

@@ -22,8 +22,9 @@ import img4 from "../assets/utcar4.png";
 
 export default function Projects() {
   return (
-    <Box sx={{ maxWidth: '900px', margin: '0 auto', mt: 5 }}>
+    <Box sx={{ maxWidth: '900px', margin: '0 auto', mt: 5 ,position:'flex'}}>
         <hr/>
+        &nbsp;
       <Typography variant="h3" textAlign="center" mb={5} fontWeight="bold">
         Our Projects
       </Typography>

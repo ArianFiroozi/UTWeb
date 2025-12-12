@@ -65,7 +65,7 @@ const Home = () => {
         ))}
       </Carousel>
 
-      <Container className="my-5">
+      <Container className="my-5" >
         <Row className="g-4">
           {flashcards.map((card, idx) => (
             <Col key={idx} md={4}>
