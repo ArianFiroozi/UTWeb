@@ -3,8 +3,12 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Modal from "react-bootstrap/Modal";
 import { useI18n } from "../i18n/I18nContext";
-
+import hatef from "../assets/people/hatef.jpg"
+import sohrab from "../assets/people/sohrab.jpg"
+import sobhan from "../assets/people/sobhan.jpg"
+import erfan from "../assets/people/erfan.jpg"
 import "./people.css"
+
 const members = [
   {
     project: "Current Members",
@@ -12,37 +16,37 @@ const members = [
       {
         name: "Dr. Mehdi Modarressi",
         role: "Supervisor",
-        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+        photo: "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=z7UNzUoAAAAJ&citpid=4"
       },
       {
         name: "Hatef Rezaee",
         role: "Lead Researcher",
-        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+        photo: hatef
       },
       {
         name: "M. Sepehr Bazargan",
-        role: "Koskhol 1",
+        role: "Qt Developer",
         photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
       },
       {
         name: "Sepehr Jamali",
-        role: "Koskhol 2",
+        role: "Qt Developer",
         photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
       },
       {
         name: "Arian Firoozi",
-        role: "Koskhol 3",
-        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+        role: "AI - Decision Making",
+        photo: "https://arianfiroozi.github.io/assets/img/prof_pic-480.webp"
       },
       {
         name: "Sobhan Abedi",
-        role: "Koskhol 4",
-        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+        role: "AI - Decision Making",
+        photo: sobhan
       },
       {
         name: "Erfan Daraee",
-        role: "Koskhol 5",
-        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+        role: "Harware - CV",
+        photo: erfan
       },
     ]
   },
@@ -52,7 +56,7 @@ const members = [
       {
         name: "Sohrab Moradi",
         role: "Lead Researcher",
-        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+        photo: sohrab
       },
       {
         name: "Mohammad Reza M. Hashemi",
@@ -60,8 +64,33 @@ const members = [
         photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
       },
       {
-        name: "Amir TJ",
-        role: "Cheater",
+        name: "Amirhossein",
+        role: "Researcher",
+        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+      },
+      {
+        name: "Hanita",
+        role: "Researcher",
+        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+      },
+      {
+        name: "Amirreza Kaffashan",
+        role: "Researcher",
+        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+      },
+      {
+        name: "Sana Sabeti",
+        role: "Researcher",
+        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+      },
+      {
+        name: "Bardia Khalafi",
+        role: "Researcher",
+        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+      },
+      {
+        name: "Behrad Elmi",
+        role: "Researcher",
         photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
       },
       {
@@ -97,7 +126,7 @@ export default function LabMembersPage() {
 
       {members.map((section, index) => (
         <div key={index} className="mb-5">
-          <h2 className="mb-4 text-primary text-center">{t(section.project)}</h2>
+          <h2 className="mb-4 text-primary text-center memtitle">{t(section.project)}</h2>
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center">
             {section.people.map((person, idx) => (
               <div className="col" key={idx}>
