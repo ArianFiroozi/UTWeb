@@ -13,6 +13,27 @@ import { OrbitControls, Environment } from "@react-three/drei";
 
 import { useGLTF } from "@react-three/drei";
 import utcar from "../assets/utcarClean.glb"
+import { Html, useProgress } from "@react-three/drei";
+import { Suspense } from "react";
+
+function Loader() {
+  const { progress } = useProgress();
+
+  return (
+    <Html center>
+      <div
+        style={{
+          color: "white",
+          fontSize: "14px",
+          fontFamily: "sans-serif",
+          textAlign: "center",
+        }}
+      >
+        <div>Loading… {progress.toFixed(0)}%</div>
+      </div>
+    </Html>
+  );
+}
 
 function Model() {
   const { scene } = useGLTF(utcar);
@@ -124,7 +145,10 @@ const Home = () => {
     <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1} />
     <ambientLight intensity={2} />
     <directionalLight position={[5, 5, 5]} />
-    <Model />
+    
+      <Suspense fallback={<Loader />}>
+        <Model />
+      </Suspense>
   </Canvas>
 </div>
 
