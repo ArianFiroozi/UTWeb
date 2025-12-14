@@ -107,10 +107,11 @@ const Home = () => {
         </Row>
       </Container>
         
-    <div style={{ width: "100vw", height: "100vh" }}>
-      <Canvas camera={{ position: [0, 2, 3] }}>
-<OrbitControls />
-        <ambientLight intensity={1} />
+    <div style={{ width: "100vw", height: "100vh", marginTop:"0px", marginBottom:"0px"}}>
+      {/* <Canvas aria-setsize={0} camera={{ position: [0, 2, 3] }}> */}
+      <Canvas shadows camera={{ position: [-5, 5, 2 ], fov: 30 }}>
+        <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1}/>
+        <ambientLight intensity={2} />
         <directionalLight position={[5, 5, 5]} />
         <Model />
       </Canvas>
