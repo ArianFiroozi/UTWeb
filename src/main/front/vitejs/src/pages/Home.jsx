@@ -142,7 +142,7 @@ const Home = () => {
     camera={{ position: [-5, 5, 2], fov: 30 }}
     style={{ width: "100%", height: "100%" }}
   >
-    <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1} />
+    <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={1} />
     <ambientLight intensity={2} />
     <directionalLight position={[5, 5, 5]} />
     
