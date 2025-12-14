@@ -12,9 +12,10 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Environment } from "@react-three/drei";
 
 import { useGLTF } from "@react-three/drei";
+import utcar from "../assets/utcarClean.glb"
 
 function Model() {
-  const { scene } = useGLTF("src/assets/utcarClean.glb");
+  const { scene } = useGLTF(utcar);
   return <primitive object={scene} scale={1} />;
 }
 
