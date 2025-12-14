@@ -8,6 +8,16 @@ import img3 from "../assets/utcar3.png";
 import img4 from "../assets/utcar4.png";
 import { useNavigate } from "react-router-dom";
 import "./Home.css"
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Environment } from "@react-three/drei";
+
+import { useGLTF } from "@react-three/drei";
+
+function Model() {
+  const { scene } = useGLTF("src/assets/utcarClean.glb");
+  return <primitive object={scene} scale={1} />;
+}
+
 
 const Home = () => {
   const { t, lang } = useI18n();
@@ -95,6 +105,15 @@ const Home = () => {
           ))}
         </Row>
       </Container>
+        
+    <div style={{ width: "100vw", height: "100vh" }}>
+      <Canvas camera={{ position: [0, 2, 3] }}>
+<OrbitControls />
+        <ambientLight intensity={1} />
+        <directionalLight position={[5, 5, 5]} />
+        <Model />
+      </Canvas>
+    </div>
 
     </div>
   );
