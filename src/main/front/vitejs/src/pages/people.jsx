@@ -7,6 +7,8 @@ import hatef from "../assets/people/hatef.jpg"
 import sohrab from "../assets/people/sohrab.jpg"
 import sobhan from "../assets/people/sobhan.jpg"
 import erfan from "../assets/people/erfan.jpg"
+import sepehr_jam from "../assets/people/sepehr_jam.jpg"
+import sepehr_baz from "../assets/people/sepehr_baz.jpg"
 import "./people.css"
 
 const members = [
@@ -16,7 +18,7 @@ const members = [
       {
         name: "Dr. Mehdi Modarressi",
         role: "Supervisor",
-        photo: "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=z7UNzUoAAAAJ&citpid=4"
+        photo: "https://media.licdn.com/dms/image/v2/D4D03AQH7ezLKnQWHYQ/profile-displayphoto-scale_200_200/B4DZpKkLHwGkAY-/0/1762187608520?e=1767830400&v=beta&t=lqHCtf8va9U5OuqAtLiislQdS1NSLHWv7HFjgDUyXng"
       },
       {
         name: "Hatef Rezaee",
@@ -24,14 +26,19 @@ const members = [
         photo: hatef
       },
       {
+        name: "Sohrab Moradi",
+        role: "Advisor - Ex Lead",
+        photo: sohrab
+      },
+      {
         name: "M. Sepehr Bazargan",
         role: "Qt Developer",
-        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+        photo: sepehr_baz
       },
       {
         name: "Sepehr Jamali",
         role: "Qt Developer",
-        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+        photo: sepehr_jam
       },
       {
         name: "Arian Firoozi",
@@ -53,11 +60,6 @@ const members = [
   {
     project: "Former Members",
     people: [
-      {
-        name: "Sohrab Moradi",
-        role: "Lead Researcher",
-        photo: sohrab
-      },
       {
         name: "Mohammad Reza M. Hashemi",
         role: "AI Researcher",
@@ -157,13 +159,13 @@ export default function LabMembersPage() {
         centered
         size="lg"
       >
-        <Modal.Body className="text-center p-4" style={{backgroundColor: '#ffffffe5', borderRadius:"10px"}}> 
+        <Modal.Body className="text-center p-4" style={{backgroundColor: '#ffffffe5', borderRadius:"10px", maxHeight:"90vh"}}> 
           {selectedPerson && (
             <>
               <img
                 src={selectedPerson.photo}
                 alt={selectedPerson.name}
-                style={{ width: "100%", height: "auto", borderRadius: "12px"}}
+                style={{ width: "100%", maxHeight: "70vh", borderRadius: "12px"}}
               />
               <h2 className="mt-4" style={{color: '#1f1f1fe5'}}>{selectedPerson.name}</h2>
               <p className="text-muted">{selectedPerson.role}</p>

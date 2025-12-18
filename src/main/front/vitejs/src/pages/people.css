@@ -9,7 +9,7 @@
 
 .card img {
   object-fit: cover;
-  height: 200px;
+  height: 300px;
   width: 100%;
 }
 
@@ -18,6 +18,28 @@
     height: 180px;
   }
 }
+.domain-header h4 {
+  color: #2c3e50;
+  letter-spacing: 0.5px;
+}
+
+.domain-header hr {
+  width: 60px;
+  border-top: 3px solid #0d6efd;
+  opacity: 1;
+}
+
+.member-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  background: #ffffffee;
+  cursor: pointer;
+}
+
+.member-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
 
 @media (max-width: 576px) {
   .card img {
