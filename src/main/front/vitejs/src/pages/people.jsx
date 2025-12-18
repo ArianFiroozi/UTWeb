@@ -129,7 +129,7 @@ export default function LabMembersPage() {
       {members.map((section, index) => (
         <div key={index} className="mb-5">
           <h2 className="mb-4 text-primary text-center memtitle">{t(section.project)}</h2>
-          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center">
+          <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center">
             {section.people.map((person, idx) => (
               <div className="col" key={idx}>
                 <div

@@ -15,7 +15,7 @@
 
 @media (max-width: 768px) {
   .card img {
-    height: 180px;
+    height: 180px !important;
   }
 }
 .domain-header h4 {
