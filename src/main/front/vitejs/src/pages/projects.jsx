@@ -169,6 +169,33 @@ export default function Projects() {
           </TimelineContent>
         </TimelineItem>
 
+        {/* 5 — CV */}
+        <TimelineItem>
+          <TimelineSeparator>
+            <TimelineConnector />
+            <TimelineDot color="secondary">
+              <MemoryIcon />
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+
+          <TimelineContent sx={{ py: '12px', px: 2 }}>
+            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "end"}}>
+              <img
+                src={img1}
+                alt="ComputerVision"
+                style={{ width: "100%", borderRadius: "10px" }}
+              />
+              <Typography variant="h6" mt={2}>
+                {t("cvstr")}
+              </Typography>
+              <Typography>
+                {t("cv")}
+              </Typography>
+            </Paper>
+          </TimelineContent>
+        </TimelineItem>
+
       </Timeline>
     </Box>
   );

@@ -40,5 +40,8 @@
     "ourproj": "Our Projects",
     "ourlabmem": "Our Lab Members",
     "Current Members": "Current Members",
-    "Former Members": "Former Members"
+    "Former Members": "Former Members",
+
+    "cvstr": "Computer Vision",
+    "cv": "Using computer vision modules to precieve the environment and make low level decisions."
   }
