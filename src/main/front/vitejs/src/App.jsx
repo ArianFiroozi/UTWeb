@@ -3,6 +3,7 @@ import UTNavbar from "./components/UTNavbar";
 import UTFooter from "./components/UTFooter";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Decision from "./pages/Decision";
 import Projects from "./pages/projects";
 import People from "./pages/people";
 import React, { useEffect } from "react";
@@ -22,6 +23,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/people" element={<People />} />
+          <Route path="/projects/decisionmaking" element={<Decision />} />
 
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

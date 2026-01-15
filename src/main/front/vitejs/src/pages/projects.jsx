@@ -5,6 +5,7 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+import { Link } from "react-router-dom";
 
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
@@ -54,6 +55,7 @@ export default function Projects() {
           </TimelineSeparator>
 
           <TimelineContent sx={{ py: '12px', px: 2 }}>
+            <Link className="nav-link custom-link" to="/projects/decisionmaking">
             <Paper
                   elevation={3}
                   sx={{
@@ -63,7 +65,7 @@ export default function Projects() {
                     textAlign: "start"
                   }}
                 >
-
+              
               <img
                 src={img1}
                 alt="Decision Making"
@@ -77,6 +79,7 @@ export default function Projects() {
                 {t("decisionmaking")}
               </Typography>
             </Paper>
+              </Link>
           </TimelineContent>
         </TimelineItem>
 
