@@ -180,6 +180,7 @@ export default function Projects() {
           </TimelineSeparator>
 
           <TimelineContent sx={{ py: '12px', px: 2 }}>
+          <Link className="nav-link custom-link" to="/projects/cv">
             <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "end"}}>
               <img
                 src={img1}
@@ -193,6 +194,7 @@ export default function Projects() {
                 {t("cv")}
               </Typography>
             </Paper>
+            </Link>
           </TimelineContent>
         </TimelineItem>
 

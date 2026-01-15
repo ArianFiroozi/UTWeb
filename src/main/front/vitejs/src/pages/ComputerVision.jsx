@@ -10,7 +10,7 @@ const ComputerVision = () => {
   const { t, lang } = useI18n();
   const isRtl = lang === "fa";
 
-  const intro = t("decisionIntro").split("\n").filter(p => p.trim() !== "");
+  const intro = t("cvIntro").split("\n").filter(p => p.trim() !== "");
 
   return (
     <Container className="my-5" dir={isRtl ? "rtl" : "ltr"}>
@@ -18,7 +18,7 @@ const ComputerVision = () => {
       &nbsp;
       <Row className={`align-items-center ${isRtl ? "flex-col-reverse" : ""}`}>
         <Col md={6}>
-          <h2 className="mb-4">{t("decisionTitle")}</h2>
+          <h2 className="mb-4">{t("cvTitle")}</h2>
           {intro.map((para, index) => (
             <p key={index} className="lead text-secondary aboutpar">
               {para}
