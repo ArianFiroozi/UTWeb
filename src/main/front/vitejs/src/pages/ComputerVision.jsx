@@ -4,6 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import "./About.css";
+import DepthImage from "./DepthImage.jsx"
 
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
@@ -30,12 +31,15 @@ import MemoryIcon from '@mui/icons-material/Memory';
 import img1 from "../assets/utcar1.jpg";
 import img2 from "../assets/utcar2.png";
 import img3 from "../assets/utcar3.png";
-import img4 from "../assets/utcar4.png";
+import imgdepth from "../assets/depth.jpg";
+import jsonDepthArray from "../assets/depth.json";
+
 
 const ComputerVision = () => {
   const { t, lang } = useI18n();
   const isRtl = lang === "fa";
-
+  const depthMap1 = new Float32Array(jsonDepthArray);
+  
   const intro = t("cvIntro").split("\n").filter(p => p.trim() !== "");
 
   return (
@@ -91,10 +95,16 @@ const ComputerVision = () => {
           textAlign: isRtl ? "right" : "left"
         }}
       >
-        <img
+        {/* <img
           src={img1}
           alt="Depth Estimation"
           style={{ width: "100%", borderRadius: "10px" }}
+        /> */}
+        <DepthImage
+          imageSrc={imgdepth}
+          depthData={depthMap1}
+          width={640}
+          height={640}
         />
 
         <Typography mt={2}>
