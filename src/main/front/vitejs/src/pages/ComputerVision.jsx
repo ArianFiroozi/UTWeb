@@ -10,12 +10,13 @@ import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
-import TreeView from '@mui/lab/TreeView';
-import TreeItem from '@mui/lab/TreeItem';
-// import TreeView from '@mui/lab/TreeView';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import { Link } from "react-router-dom";
+import Stepper from '@mui/material/Stepper';
+import Step from '@mui/material/Step';
+import StepLabel from '@mui/material/StepLabel';
+import StepContent from '@mui/material/StepContent';
 
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
@@ -61,89 +62,82 @@ const ComputerVision = () => {
         </Col>
       </Row>
     
-    <Timeline position="right">
+    <Stepper
+  orientation="vertical"
+  sx={{
+  '& .MuiStepConnector-line': {
+    minHeight: 24,
+  },
+}}
 
-        {/* 1 — Decision Making */}
-        <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: 'auto 0' }}
-            align="right"
-            variant="body2"
-            color="text.secondary"
-          />
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="primary">
-              <PrecisionManufacturingIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
+>
+  {/* 1 — Decision Making */}
+  <Step active>
+    <StepLabel
+      icon={<PrecisionManufacturingIcon />}
+    >
+      <Typography variant="h6">
+        {t("deptheststr")}
+      </Typography>
+    </StepLabel>
 
-          <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Paper
-                  elevation={3}
-                  sx={{
-                    p: 2,
-                    borderRadius: 3,
-                    backgroundColor: '#ffffffe5',
-                    textAlign: "start"
-                  }}
-                >
-              
-              <img
-                src={img1}
-                alt="Depth Estimation"
-                style={{ width: "100%", borderRadius: "10px" }}
-              />
+    <StepContent>
+      <Paper
+        elevation={3}
+        sx={{
+          p: 2,
+          borderRadius: 3,
+          backgroundColor: '#ffffffe5',
+          textAlign: isRtl ? "right" : "left"
+        }}
+      >
+        <img
+          src={img1}
+          alt="Depth Estimation"
+          style={{ width: "100%", borderRadius: "10px" }}
+        />
 
-              <Typography variant="h6" mt={2}>
-                {t("deptheststr")}
-              </Typography>
-              <Typography>
-                {t("decisionmaking")}
-              </Typography>
-            </Paper>
-          </TimelineContent>
-        </TimelineItem>
+        <Typography mt={2}>
+          {t("decisionmaking")}
+        </Typography>
+      </Paper>
+    </StepContent>
+  </Step>
 
-        {/* 2 — Simulation */}
-        <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: 'auto 0' }}
-            variant="body2"
-            color="text.secondary"
-          />
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="secondary">
-              <LaptopMacIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
+  {/* 2 — Simulation */}
+  <Step active>
+    <StepLabel
+      icon={<LaptopMacIcon />}
+    >
+      <Typography variant="h6">
+        {t("lanedetectstr")}
+      </Typography>
+    </StepLabel>
 
-          <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "end"}}>
-              <img
-                src={img2}
-                alt="Simulation"
-                style={{ width: "100%", borderRadius: "10px" }}
-              />
-              <Typography variant="h6" mt={2}>
-                {t("lanedetectstr")}
-              </Typography>
-              <Typography>
-                {t("simulation")}
-              </Typography>
-            </Paper>
-          </TimelineContent>
-        </TimelineItem>
-    </Timeline>
+    <StepContent>
+      <Paper
+        elevation={3}
+        sx={{
+          p: 2,
+          borderRadius: 3,
+          backgroundColor: '#ffffffe5',
+          textAlign: isRtl ? "right" : "left"
+        }}
+      >
+        <img
+          src={img2}
+          alt="Simulation"
+          style={{ width: "100%", borderRadius: "10px" }}
+        />
 
-    <TreeView>
-        <TreeItem>
+        <Typography mt={2}>
+          {t("simulation")}
+        </Typography>
+      </Paper>
+    </StepContent>
+  </Step>
+</Stepper>
 
-        </TreeItem>
-    </TreeView>
     </Container>
     // </div>
   );
