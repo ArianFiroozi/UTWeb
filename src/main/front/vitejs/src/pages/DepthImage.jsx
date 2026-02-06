@@ -7,24 +7,23 @@ const DepthImage = ({ imageSrc, depthData, width, height }) => {
   const [hoverInfo, setHoverInfo] = React.useState(null);
 
   React.useEffect(() => {
-  const canvas = canvasRef.current;
-  if (!canvas) return;
+    const canvas = canvasRef.current;
+    if (!canvas) return;
 
-  const ctx = canvas.getContext("2d");
-  if (!ctx) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
 
-  const img = new window.Image();
-  img.onload = () => {
-    ctx.clearRect(0, 0, width, height);
-    ctx.drawImage(img, 0, 0, width, height);
-  };
-  img.src = imageSrc;
-  img.onerror = () => {
-  console.error("Failed to load image:", imageSrc);
-};
+    const img = new window.Image();
+    img.onload = () => {
+      ctx.clearRect(0, 0, width, height);
+      ctx.drawImage(img, 0, 0, width, height);
+    };
+    img.src = imageSrc;
+    img.onerror = () => {
+      console.error("Failed to load image:", imageSrc);
+    };
 
-}, [imageSrc, width, height]);
-
+  }, [imageSrc, width, height]);
 
   const handleMouseMove = (e) => {
     const rect = canvasRef.current.getBoundingClientRect();
@@ -44,7 +43,14 @@ const DepthImage = ({ imageSrc, depthData, width, height }) => {
         width={width}
         height={height}
         onMouseMove={handleMouseMove}
-        style={{ width: "100%", cursor: "crosshair" }}
+        style={{
+          width: "100%",
+          cursor: "crosshair",
+          maxHeight: "500px",
+          maxWidth: "500px",
+          borderRadius: "10px", // Apply border radius for smooth edges
+          overflow: "hidden" // Prevent overflow
+        }}
       />
       {hoverInfo && (
         <div

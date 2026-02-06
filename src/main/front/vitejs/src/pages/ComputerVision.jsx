@@ -75,44 +75,47 @@ const ComputerVision = () => {
 }}
 
 >
-  {/* 1 — Decision Making */}
-  <Step active>
-    <StepLabel
-      icon={<PrecisionManufacturingIcon />}
+{/* 1 — Decision Making */}
+<Step active>
+  <StepLabel
+    icon={<PrecisionManufacturingIcon />}
+  >
+    <Typography variant="h6">
+      {t("deptheststr")}
+    </Typography>
+  </StepLabel>
+
+  <StepContent>
+    <Paper
+      elevation={3}
+      sx={{
+        p: 2,
+        borderRadius: 3,
+        backgroundColor: '#ffffffe5',
+        display: 'flex',
+        flexDirection: { xs: 'column', sm: 'row' }, // Stack vertically on small screens
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}
     >
-      <Typography variant="h6">
-        {t("deptheststr")}
+      <Typography mt={2} sx={{ flex: 1, textAlign: 'left' }}>
+        {t("decisionmaking")}
       </Typography>
-    </StepLabel>
 
-    <StepContent>
-      <Paper
-        elevation={3}
-        sx={{
-          p: 2,
-          borderRadius: 3,
-          backgroundColor: '#ffffffe5',
-          textAlign: isRtl ? "right" : "left"
+      <DepthImage
+        imageSrc={imgdepth}
+        depthData={depthMap1}
+        width={320}
+        height={320}
+        style={{
+          width: "150px", // Adjusted width for consistent layout
+          borderRadius: "10px",
+          mt: { xs: 2, sm: 0 }, // Add margin on top for small screens
         }}
-      >
-        {/* <img
-          src={img1}
-          alt="Depth Estimation"
-          style={{ width: "100%", borderRadius: "10px" }}
-        /> */}
-        <DepthImage
-          imageSrc={imgdepth}
-          depthData={depthMap1}
-          width={640}
-          height={640}
-        />
-
-        <Typography mt={2}>
-          {t("decisionmaking")}
-        </Typography>
-      </Paper>
-    </StepContent>
-  </Step>
+      />
+    </Paper>
+  </StepContent>
+</Step>
 
   {/* 2 — Simulation */}
   <Step active>
