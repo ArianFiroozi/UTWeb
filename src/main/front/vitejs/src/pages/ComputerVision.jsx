@@ -6,14 +6,6 @@ import Image from "react-bootstrap/Image";
 import "./About.css";
 import DepthImage from "./DepthImage.jsx"
 
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import { Link } from "react-router-dom";
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
@@ -21,7 +13,6 @@ import StepContent from '@mui/material/StepContent';
 
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
 
 import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
@@ -33,6 +24,7 @@ import img2 from "../assets/utcar2.png";
 import img3 from "../assets/utcar3.png";
 import imgdepth from "../assets/depth.jpg";
 import jsonDepthArray from "../assets/depth.json";
+import vid_test1 from "../assets/videos/test1.mp4"
 
 
 const ComputerVision = () => {
@@ -113,6 +105,44 @@ const ComputerVision = () => {
           mt: { xs: 2, sm: 0 }, // Add margin on top for small screens
         }}
       />
+    </Paper>
+  </StepContent>
+</Step>
+
+
+<Step active>
+  <StepLabel
+    icon={<PrecisionManufacturingIcon />}
+  >
+    <Typography variant="h6">
+      {t("deptheststr")}
+    </Typography>
+  </StepLabel>
+
+  <StepContent>
+    <Paper
+      elevation={3}
+      sx={{
+        p: 2,
+        borderRadius: 3,
+        backgroundColor: '#ffffffe5',
+        display: 'flex',
+        flexDirection: { xs: 'column', sm: 'row' }, // Stack vertically on small screens
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}
+    >
+      <Typography mt={2} sx={{ flex: 1, textAlign: 'left' }}>
+        {t("decisionmaking")}
+      </Typography>
+
+      
+      <video 
+        controls 
+        style={{ width: '100%', borderRadius: 10, maxWidth: '700px', margin: '1rem' }} 
+      >
+        <source src= {vid_test1} type="video/mp4" />
+      </video>
     </Paper>
   </StepContent>
 </Step>
