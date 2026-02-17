@@ -20,6 +20,7 @@ export default function UTNavbar() {
       expand="lg"
       className="ut-navbar shadow-sm"
       sticky="top"
+      onMouseLeave={()=>setExpanded(false)} 
       expanded={expanded}               // <-- control expanded state
       onToggle={() => setExpanded(!expanded)} // <-- toggle when clicking the toggle button
     >
