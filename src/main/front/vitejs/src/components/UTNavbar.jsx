@@ -111,7 +111,7 @@ export default function UTNavbar() {
               {t("about")}
             </Link>
 
-            <button onClick={() => { toggleLang(); setExpanded(false); }} className="lang-btn rounded-3 px-3 py-1 ms-2">
+            <button onClick={() => { toggleLang();}} className="lang-btn rounded-3 px-3 py-1 ms-2">
               {t("switch")}
             </button>
           </Nav>

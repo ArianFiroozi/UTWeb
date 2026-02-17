@@ -95,6 +95,7 @@ export default function Projects() {
           </TimelineSeparator>
 
           <TimelineContent sx={{ py: '12px', px: 2 }}>
+            <Link className="nav-link custom-link" to="/projects/hardware">
             <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "end"}}>
               <img
                 src={img4}
@@ -108,6 +109,7 @@ export default function Projects() {
                 {t("hardware")}
               </Typography>
             </Paper>
+            </Link>
           </TimelineContent>
         </TimelineItem>
 
@@ -156,6 +158,7 @@ export default function Projects() {
           </TimelineSeparator>
 
           <TimelineContent sx={{ py: '12px', px: 2 }}>
+            <Link className="nav-link custom-link" to="/projects/simulation">
             <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "end"}}>
               <img
                 src={img2}
@@ -169,6 +172,7 @@ export default function Projects() {
                 {t("simulation")}
               </Typography>
             </Paper>
+            </Link>
           </TimelineContent>
         </TimelineItem>
 
@@ -183,6 +187,7 @@ export default function Projects() {
           </TimelineSeparator>
 
           <TimelineContent sx={{ py: '12px', px: 2 }}>
+            <Link className="nav-link custom-link" to="/projects/sensor-integration">
             <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "start"}}>
               <img
                 src={img3}
@@ -196,6 +201,7 @@ export default function Projects() {
                 {t("sensorp")}
               </Typography>
             </Paper>
+            </Link>
           </TimelineContent>
         </TimelineItem>
 

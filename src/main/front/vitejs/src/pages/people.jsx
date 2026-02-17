@@ -18,7 +18,7 @@ const members = [
       {
         name: "Dr. Mehdi Modarressi",
         role: "Supervisor",
-        photo: "https://media.licdn.com/dms/image/v2/D4D03AQH7ezLKnQWHYQ/profile-displayphoto-scale_200_200/B4DZpKkLHwGkAY-/0/1762187608520?e=1767830400&v=beta&t=lqHCtf8va9U5OuqAtLiislQdS1NSLHWv7HFjgDUyXng"
+        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWomKCshk9koMK7EhLHEj-i7ud9hC8TfGQawK11fFJqQ&s"
       },
       {
         name: "Hatef Rezaee",

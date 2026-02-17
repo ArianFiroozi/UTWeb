@@ -46,6 +46,7 @@
     "cv": "Using computer vision modules to precieve the environment and make low level decisions.",
 
     "cvTitle": "Computer Vision",
-    "cvIntro": "We design computer vision modules to percieve the environment and extract meaningful information from the sensors. Afterwards, this information is used to make both low level and high level decision making.\n Our computer vision pipeline consists of 3 modules."
+    "cvIntro": "We design computer vision modules to percieve the environment and extract meaningful information from the sensors. Afterwards, this information is used to make both low level and high level decision making.\n Our computer vision pipeline consists of 3 modules.",
 
+    "cm" : "cm"
   }

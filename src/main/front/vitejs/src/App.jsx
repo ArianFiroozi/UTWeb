@@ -9,6 +9,9 @@ import People from "./pages/people";
 import ComputerVision from "./pages/ComputerVision";
 import React, { useEffect } from "react";
 import "./App.css"
+import Sensors from "./pages/Sensors";
+import Simulation from "./pages/Simulation";
+import Hardware from "./pages/Hardware";
 
 function App() {
     useEffect(() => {
@@ -26,6 +29,9 @@ function App() {
           <Route path="/people" element={<People />} />
           <Route path="/projects/decision-making" element={<Decision />} />
           <Route path="/projects/cv" element={<ComputerVision />} />
+          <Route path="/projects/sensor-integration" element={<Sensors />} />
+          <Route path="/projects/simulation" element={<Simulation />} />
+          <Route path="/projects/hardware" element={<Hardware />} />
 
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
