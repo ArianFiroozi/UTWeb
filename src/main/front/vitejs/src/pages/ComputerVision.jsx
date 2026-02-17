@@ -24,7 +24,8 @@ import img2 from "../assets/utcar2.png";
 import img3 from "../assets/utcar3.png";
 import imgdepth from "../assets/depth.jpg";
 import jsonDepthArray from "../assets/depth.json";
-import vid_test1 from "../assets/videos/test1.mp4"
+import vid_test1 from "../assets/videos/test1.mp4";
+import vid_lane from "../assets/videos/lanedetection.mp4";
 
 
 const ComputerVision = () => {
@@ -141,44 +142,49 @@ const ComputerVision = () => {
         controls 
         style={{ width: '100%', borderRadius: 10, maxWidth: '700px', margin: '1rem' }} 
       >
+        <source src= {vid_lane} type="video/mp4" />
+      </video>
+    </Paper>
+  </StepContent>
+</Step>
+
+<Step active>
+  <StepLabel
+    icon={<PrecisionManufacturingIcon />}
+  >
+    <Typography variant="h6">
+      {t("deptheststr")}
+    </Typography>
+  </StepLabel>
+
+  <StepContent>
+    <Paper
+      elevation={3}
+      sx={{
+        p: 2,
+        borderRadius: 3,
+        backgroundColor: '#ffffffe5',
+        display: 'flex',
+        flexDirection: { xs: 'column', sm: 'row' }, // Stack vertically on small screens
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}
+    >
+      <Typography mt={2} sx={{ flex: 1, textAlign: 'left' }}>
+        {t("decisionmaking")}
+      </Typography>
+
+      
+      <video 
+        controls 
+        style={{ width: '100%', borderRadius: 10, maxWidth: '700px', margin: '1rem' }} 
+      >
         <source src= {vid_test1} type="video/mp4" />
       </video>
     </Paper>
   </StepContent>
 </Step>
 
-  {/* 2 — Simulation */}
-  <Step active>
-    <StepLabel
-      icon={<LaptopMacIcon />}
-    >
-      <Typography variant="h6">
-        {t("lanedetectstr")}
-      </Typography>
-    </StepLabel>
-
-    <StepContent>
-      <Paper
-        elevation={3}
-        sx={{
-          p: 2,
-          borderRadius: 3,
-          backgroundColor: '#ffffffe5',
-          textAlign: isRtl ? "right" : "left"
-        }}
-      >
-        <img
-          src={img2}
-          alt="Simulation"
-          style={{ width: "100%", borderRadius: "10px" }}
-        />
-
-        <Typography mt={2}>
-          {t("simulation")}
-        </Typography>
-      </Paper>
-    </StepContent>
-  </Step>
 </Stepper>
 
     </Container>
