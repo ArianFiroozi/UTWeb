@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
-import "./About.css";
+import "./projectinner.css";
 import DepthImage from "./DepthImage.jsx"
 
 import Stepper from '@mui/material/Stepper';
@@ -14,7 +14,7 @@ import StepContent from '@mui/material/StepContent';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 
-import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
+import Search from '@mui/icons-material/Search';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import AddRoadIcon from '@mui/icons-material/AddRoad';
 import SquareFootIcon from '@mui/icons-material/SquareFoot';
@@ -24,6 +24,8 @@ import imgdepth from "../assets/depth.jpg";
 import jsonDepthArray from "../assets/depth.json";
 import vid_test1 from "../assets/videos/test1.mp4";
 import vid_lane from "../assets/videos/lanedetection.mp4";
+import yolo from "../assets/yolo.jpg";
+import { motion } from "framer-motion";
 
 
 const ComputerVision = () => {
@@ -32,6 +34,16 @@ const ComputerVision = () => {
   const depthMap1 = new Float32Array(jsonDepthArray);
   
   const intro = t("cvIntro").split("\n").filter(p => p.trim() !== "");
+  const popVariants = {
+  hidden: { opacity: 0, y: 60, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.6, ease: "easeOut" }
+  }
+};
+
 
   return (
     <Container className="my-5" dir={isRtl ? "rtl" : "ltr"}>
@@ -66,6 +78,98 @@ const ComputerVision = () => {
 }}
 
 >
+
+
+<Step active>
+  <StepLabel
+    icon={<ArrowForwardIosIcon />}
+  >
+    <Typography variant="h6" className="white">
+      {t("Fill") }
+    </Typography>
+  </StepLabel>
+
+  <StepContent>
+    <motion.div
+      variants={popVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-80px" }}
+    >
+    <Paper
+      elevation={3}
+      sx={{
+        p: 2,
+        borderRadius: 3,
+        backgroundColor: '#ffffffe5',
+        display: 'flex',
+        flexDirection: { xs: 'column', sm: 'row' }, // Stack vertically on small screens
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}
+    >
+      <Typography mt={2} sx={{ flex: 1, textAlign: 'left' }}>
+        {t("decisionmaking")}
+      </Typography>
+
+      
+      <video 
+        controls 
+        style={{ width: '100%', borderRadius: 10, maxWidth: '700px', margin: '1rem' }} 
+      >
+        <source src= {vid_test1} type="video/mp4" />
+      </video>
+    </Paper>
+    </motion.div>
+  </StepContent>
+
+
+<Step active>
+  <StepLabel
+    icon={<AddRoadIcon />}
+  >
+    <Typography variant="h6" className="white">
+      {t("Fill")}
+    </Typography>
+  </StepLabel>
+
+  <StepContent>
+
+    <motion.div
+      variants={popVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-80px" }}
+    >
+    <Paper
+      elevation={3}
+      sx={{
+        p: 2,
+        borderRadius: 3,
+        backgroundColor: '#ffffffe5',
+        display: 'flex',
+        flexDirection: { xs: 'column', sm: 'row' }, // Stack vertically on small screens
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}
+    >
+      <Typography mt={2} sx={{ flex: 1, textAlign: 'left' }}>
+        {t("decisionmaking")}
+      </Typography>
+
+      
+      <video 
+        controls 
+        style={{ width: '100%', borderRadius: 10, maxWidth: '700px', margin: '1rem' }} 
+      >
+        <source src= {vid_lane} type="video/mp4" />
+      </video>
+    </Paper>
+    </motion.div>
+  </StepContent>
+</Step>
+
+</Step>
 {/* 1 — Decision Making */}
 <Step active>
   <StepLabel
@@ -77,6 +181,13 @@ const ComputerVision = () => {
   </StepLabel>
 
   <StepContent>
+
+    <motion.div
+      variants={popVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-80px" }}
+    >
     <Paper
       elevation={3}
       sx={{
@@ -105,50 +216,15 @@ const ComputerVision = () => {
         }}
       />
     </Paper>
+    </motion.div>
   </StepContent>
 </Step>
 
 
-<Step active>
-  <StepLabel
-    icon={<AddRoadIcon />}
-  >
-    <Typography variant="h6" className="white">
-      {t("Fill")}
-    </Typography>
-  </StepLabel>
-
-  <StepContent>
-    <Paper
-      elevation={3}
-      sx={{
-        p: 2,
-        borderRadius: 3,
-        backgroundColor: '#ffffffe5',
-        display: 'flex',
-        flexDirection: { xs: 'column', sm: 'row' }, // Stack vertically on small screens
-        justifyContent: 'space-between',
-        alignItems: 'center',
-      }}
-    >
-      <Typography mt={2} sx={{ flex: 1, textAlign: 'left' }}>
-        {t("decisionmaking")}
-      </Typography>
-
-      
-      <video 
-        controls 
-        style={{ width: '100%', borderRadius: 10, maxWidth: '700px', margin: '1rem' }} 
-      >
-        <source src= {vid_lane} type="video/mp4" />
-      </video>
-    </Paper>
-  </StepContent>
-</Step>
 
 <Step active>
   <StepLabel
-    icon={<ArrowForwardIosIcon />}
+    icon={<Search />}
   >
     <Typography variant="h6" className="white">
       {t("Fill") }
@@ -156,6 +232,13 @@ const ComputerVision = () => {
   </StepLabel>
 
   <StepContent>
+
+    <motion.div
+      variants={popVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-80px" }}
+    >
     <Paper
       elevation={3}
       sx={{
@@ -173,13 +256,14 @@ const ComputerVision = () => {
       </Typography>
 
       
-      <video 
-        controls 
-        style={{ width: '100%', borderRadius: 10, maxWidth: '700px', margin: '1rem' }} 
-      >
-        <source src= {vid_test1} type="video/mp4" />
-      </video>
+      <img
+        src={yolo}
+        style={{ width: '100%', borderRadius: 10, maxWidth: '500px', margin: '1rem' }}
+        alt=""
+      />
+
     </Paper>
+    </motion.div>
   </StepContent>
 </Step>
 
