@@ -25,6 +25,19 @@
   background-color: #0A0012 !important;
 }
 
+.ut-navdrop {
+  color: white;
+  text-align: center;
+  background-color: #0A0012 !important;
+}
+
+.dropdown-toggle.show {
+  color: #455d7a !important;
+}
+.dropdown-menu {
+  background-color: #0A0012 !important;
+}
+
 .white {
  color: white;
 }
