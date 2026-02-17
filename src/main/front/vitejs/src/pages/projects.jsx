@@ -17,6 +17,7 @@ import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturi
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import SensorsIcon from '@mui/icons-material/Sensors';
 import MemoryIcon from '@mui/icons-material/Memory';
+import CameraAltIcon from '@mui/icons-material/CameraAlt';
 
 import img1 from "../assets/utcar1.jpg";
 import img2 from "../assets/utcar2.png";
@@ -83,6 +84,62 @@ export default function Projects() {
           </TimelineContent>
         </TimelineItem>
 
+        {/* 4 — Hardware */}
+        <TimelineItem>
+          <TimelineSeparator>
+            <TimelineConnector />
+            <TimelineDot color="secondary">
+              <MemoryIcon />
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+
+          <TimelineContent sx={{ py: '12px', px: 2 }}>
+            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "end"}}>
+              <img
+                src={img4}
+                alt="Hardware"
+                style={{ width: "100%", borderRadius: "10px" }}
+              />
+              <Typography variant="h6" mt={2}>
+                {t("hardwarestr")}
+              </Typography>
+              <Typography>
+                {t("hardware")}
+              </Typography>
+            </Paper>
+          </TimelineContent>
+        </TimelineItem>
+
+        {/* 5 — CV */}
+        <TimelineItem>
+          <TimelineSeparator>
+            <TimelineConnector />
+            <TimelineDot color="primary">
+              <CameraAltIcon />
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+
+          <TimelineContent sx={{ py: '12px', px: 2 }}>
+          <Link className="nav-link custom-link" to="/projects/cv">
+            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "end"}}>
+              <img
+                src={img1}
+                alt="ComputerVision"
+                style={{ width: "100%", borderRadius: "10px" }}
+              />
+              <Typography variant="h6" mt={2}>
+                {t("cvstr")}
+              </Typography>
+              <Typography>
+                {t("cv")}
+              </Typography>
+            </Paper>
+            </Link>
+          </TimelineContent>
+        </TimelineItem>
+
         {/* 2 — Simulation */}
         <TimelineItem>
           <TimelineOppositeContent
@@ -139,62 +196,6 @@ export default function Projects() {
                 {t("sensorp")}
               </Typography>
             </Paper>
-          </TimelineContent>
-        </TimelineItem>
-
-        {/* 4 — Hardware */}
-        <TimelineItem>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="secondary">
-              <MemoryIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-
-          <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "end"}}>
-              <img
-                src={img4}
-                alt="Hardware"
-                style={{ width: "100%", borderRadius: "10px" }}
-              />
-              <Typography variant="h6" mt={2}>
-                {t("hardwarestr")}
-              </Typography>
-              <Typography>
-                {t("hardware")}
-              </Typography>
-            </Paper>
-          </TimelineContent>
-        </TimelineItem>
-
-        {/* 5 — CV */}
-        <TimelineItem>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="secondary">
-              <MemoryIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-
-          <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Link className="nav-link custom-link" to="/projects/cv">
-            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "end"}}>
-              <img
-                src={img1}
-                alt="ComputerVision"
-                style={{ width: "100%", borderRadius: "10px" }}
-              />
-              <Typography variant="h6" mt={2}>
-                {t("cvstr")}
-              </Typography>
-              <Typography>
-                {t("cv")}
-              </Typography>
-            </Paper>
-            </Link>
           </TimelineContent>
         </TimelineItem>
 
