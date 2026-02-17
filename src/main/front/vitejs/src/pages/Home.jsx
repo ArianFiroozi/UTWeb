@@ -166,7 +166,7 @@ const Home = () => {
 >
   <Canvas
     shadows
-    camera={{ position: [-5, 5, 2], fov: 30 }}
+    camera={{ position: [5, 5, 2], fov: 30 }}
     style={{ width: "100%", height: "100%" }}
   >
     <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={1} />
@@ -178,29 +178,6 @@ const Home = () => {
       </Suspense>
   </Canvas>
 </div>
-
-
-{/* <div
-  style={{
-    width: "100vw",
-    height: "100vh",
-    maxWidth: "100%",
-    overflow: "hidden",
-    margin: 0,
-  }}
->
-  <Canvas
-    shadows
-    camera={{ position: [-5, 5, 2], fov: 30 }}
-    style={{ width: "100%", height: "100%" }}
-  >
-    <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1} />
-    <ambientLight intensity={2} />
-    <directionalLight position={[5, 5, 5]} />
-    <Model />
-  </Canvas>
-</div> */}
-
     </div>
   );
 };

@@ -14,6 +14,10 @@ p.lead {
   text-align: justify;
 }
 
+.white {
+  color: white !important;
+}
+
 /* Image styling */
 img {
   max-width: 100%;

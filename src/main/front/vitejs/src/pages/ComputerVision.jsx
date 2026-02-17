@@ -15,13 +15,11 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 
 import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
-import LaptopMacIcon from '@mui/icons-material/LaptopMac';
-import SensorsIcon from '@mui/icons-material/Sensors';
-import MemoryIcon from '@mui/icons-material/Memory';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import AddRoadIcon from '@mui/icons-material/AddRoad';
+import SquareFootIcon from '@mui/icons-material/SquareFoot';
 
 import img1 from "../assets/utcar1.jpg";
-import img2 from "../assets/utcar2.png";
-import img3 from "../assets/utcar3.png";
 import imgdepth from "../assets/depth.jpg";
 import jsonDepthArray from "../assets/depth.json";
 import vid_test1 from "../assets/videos/test1.mp4";
@@ -71,10 +69,10 @@ const ComputerVision = () => {
 {/* 1 — Decision Making */}
 <Step active>
   <StepLabel
-    icon={<PrecisionManufacturingIcon />}
+    icon={<SquareFootIcon />}
   >
-    <Typography variant="h6">
-      {t("deptheststr")}
+    <Typography variant="h6" className="white">
+      {t("Fill")}
     </Typography>
   </StepLabel>
 
@@ -113,10 +111,10 @@ const ComputerVision = () => {
 
 <Step active>
   <StepLabel
-    icon={<PrecisionManufacturingIcon />}
+    icon={<AddRoadIcon />}
   >
-    <Typography variant="h6">
-      {t("deptheststr")}
+    <Typography variant="h6" className="white">
+      {t("Fill")}
     </Typography>
   </StepLabel>
 
@@ -150,10 +148,10 @@ const ComputerVision = () => {
 
 <Step active>
   <StepLabel
-    icon={<PrecisionManufacturingIcon />}
+    icon={<ArrowForwardIosIcon />}
   >
-    <Typography variant="h6">
-      {t("deptheststr")}
+    <Typography variant="h6" className="white">
+      {t("Fill") }
     </Typography>
   </StepLabel>
 
