@@ -5,6 +5,9 @@ import React from "react";
 const DepthImage = ({ imageSrc, depthData, width, height }) => {
   const canvasRef = React.useRef(null);
   const [hoverInfo, setHoverInfo] = React.useState(null);
+  const handleMouseLeave = () => {
+    setHoverInfo(null);
+  };
 
   React.useEffect(() => {
     const canvas = canvasRef.current;
@@ -43,6 +46,7 @@ const DepthImage = ({ imageSrc, depthData, width, height }) => {
         width={width}
         height={height}
         onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
         style={{
           width: "100%",
           cursor: "crosshair",
