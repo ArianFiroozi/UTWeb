@@ -60,7 +60,7 @@ export default function UTNavbar() {
                   setExpanded(false);
                 }}
               >
-                Decision Making
+                {t("decisionmakingstr")}
               </NavDropdown.Item>
 
               <NavDropdown.Item
@@ -70,7 +70,7 @@ export default function UTNavbar() {
                   setExpanded(false);
                 }}
               >
-                Hardware
+                {t("hardwarestr")}
               </NavDropdown.Item>
 
               <NavDropdown.Item
@@ -80,7 +80,7 @@ export default function UTNavbar() {
                   setExpanded(false);
                 }}
               >
-                Computer Vision
+                {t("cvstr")}
               </NavDropdown.Item>
 
               <NavDropdown.Item
@@ -90,7 +90,7 @@ export default function UTNavbar() {
                   setExpanded(false);
                 }}
               >
-                Simulation
+                {t("simulationstr")}
               </NavDropdown.Item>
 
               <NavDropdown.Item
@@ -100,7 +100,7 @@ export default function UTNavbar() {
                   setExpanded(false);
                 }}
               >
-                Sensor Integration
+                {t("sensorstr")}
               </NavDropdown.Item>
             </NavDropdown>
             <Link className="nav-link custom-link" to="/people" onClick={() => setExpanded(false)}>

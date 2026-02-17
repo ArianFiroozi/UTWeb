@@ -24,7 +24,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/people" element={<People />} />
-          <Route path="/projects/decisionmaking" element={<Decision />} />
+          <Route path="/projects/decision-making" element={<Decision />} />
           <Route path="/projects/cv" element={<ComputerVision />} />
 
           <Route path="*" element={<Navigate to="/" replace />} />

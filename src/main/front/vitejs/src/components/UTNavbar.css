@@ -25,6 +25,9 @@
   background-color: #0A0012 !important;
 }
 
+.ut-navdrop:hover {
+  color:#455d7a;
+}
 .ut-navdrop {
   color: white;
   text-align: center;

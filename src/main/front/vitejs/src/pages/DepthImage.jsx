@@ -1,6 +1,7 @@
 import Image from "react-bootstrap/Image";
 import "./About.css";
 import React from "react";
+import { useI18n } from "../i18n/I18nContext";
 
 const DepthImage = ({ imageSrc, depthData, width, height }) => {
   const canvasRef = React.useRef(null);
@@ -8,6 +9,7 @@ const DepthImage = ({ imageSrc, depthData, width, height }) => {
   const handleMouseLeave = () => {
     setHoverInfo(null);
   };
+  const { t, lang } = useI18n();
 
   React.useEffect(() => {
     const canvas = canvasRef.current;
@@ -70,7 +72,7 @@ const DepthImage = ({ imageSrc, depthData, width, height }) => {
             fontSize: 12
           }}
         >
-          {hoverInfo.distance.toFixed(2)} cm
+          {hoverInfo.distance.toFixed(2)} {t("cm")}
         </div>
       )}
     </>

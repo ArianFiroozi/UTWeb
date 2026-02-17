@@ -56,7 +56,7 @@ export default function Projects() {
           </TimelineSeparator>
 
           <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Link className="nav-link custom-link" to="/projects/decisionmaking">
+            <Link className="nav-link custom-link" to="/projects/decision-making">
             <Paper
                   elevation={3}
                   sx={{
