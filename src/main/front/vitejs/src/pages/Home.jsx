@@ -9,8 +9,10 @@ import img4 from "../assets/utcar4.png";
 import { useNavigate } from "react-router-dom";
 import "./Home.css"
 import { Canvas } from "@react-three/fiber";
+import React from 'react';
+import { useEffect } from "react";
 import { OrbitControls, Environment } from "@react-three/drei";
-
+import {ToastContainer, Zoom, toast} from "react-toastify";
 import { useGLTF } from "@react-three/drei";
 import utcar from "../assets/utcarClean.glb"
 import { Html, useProgress } from "@react-three/drei";
@@ -43,6 +45,20 @@ function Model() {
 
 const Home = () => {
   const { t, lang } = useI18n();
+  const [show, hide] = useState(true);
+  // const notify = () => toast("This website is bad");
+  useEffect(() => {
+    const notify = () => toast.warning(
+      <>This website is under maintenance! <br />
+      We will move to a different domain once the work is done.
+      </>, {style:
+        {width:"350px",
+          textAlign:"center"
+        }
+      });
+
+    notify();
+  }, [])
 
   const slides = [
     { 
@@ -95,6 +111,17 @@ const Home = () => {
     <div dir={lang === "fa" ? "rtl" : "ltr"} className="containerw">
       &nbsp;
       <hr/>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        theme="dark"
+        transition={Zoom}
+        />
       <Carousel interval={5000}>
         {slides.map((slide, idx) => (
           <Carousel.Item key={idx}>
