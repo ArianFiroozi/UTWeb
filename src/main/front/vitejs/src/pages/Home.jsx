@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Card, Container, Row, Col, Button, Carousel } from "react-bootstrap";
 import { LightningFill, CpuFill, LeafFill } from "react-bootstrap-icons";
 import { useI18n } from "../i18n/I18nContext";
@@ -47,8 +47,12 @@ const Home = () => {
   const { t, lang } = useI18n();
   const [show, hide] = useState(true);
   // const notify = () => toast("This website is bad");
+  const idRef = useRef(null);
   useEffect(() => {
-    const notify = () => toast.warning(
+      if (idRef.current) {
+        toast.dismiss(idRef.current);
+      }
+    idRef.current = toast.warning(
       <>
         {t("maintenanceTitle")} <br />
         {t("maintenanceBody")}
@@ -57,9 +61,7 @@ const Home = () => {
         style: { width: "350px", textAlign: "center" },
       }
     );
-
-    notify();
-  }, [])
+  }, [t])
 
   const slides = [
     { 
