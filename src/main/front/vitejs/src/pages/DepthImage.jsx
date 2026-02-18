@@ -1,4 +1,3 @@
-import Image from "react-bootstrap/Image";
 import "./About.css";
 import React from "react";
 import { useI18n } from "../i18n/I18nContext";

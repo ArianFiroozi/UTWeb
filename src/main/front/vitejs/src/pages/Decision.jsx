@@ -4,7 +4,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 import "./projectinner.css";
-import DepthImage from "./DepthImage.jsx"
 
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
@@ -14,20 +13,15 @@ import StepContent from '@mui/material/StepContent';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 
-import Search from '@mui/icons-material/Search';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import AddRoadIcon from '@mui/icons-material/AddRoad';
-import SquareFootIcon from '@mui/icons-material/SquareFoot';
 import CarCrashIcon from '@mui/icons-material/CarCrash';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 
 import img1 from "../assets/utcar1.jpg";
-import imgdepth from "../assets/depth.jpg";
 import jsonDepthArray from "../assets/depth.json";
 import vid_carla_multi from "../assets/videos/decision-carla-multi.mp4";
 import vid_carla_single from "../assets/videos/decision-carla-single.mp4";
 import vid_highway_multi from "../assets/videos/decision-highway-multi.mp4";
-import yolo from "../assets/yolo.jpg";
 import { motion } from "framer-motion";
 
 
