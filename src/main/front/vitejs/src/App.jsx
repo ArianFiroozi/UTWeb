@@ -12,6 +12,18 @@ import "./App.css"
 import Sensors from "./pages/Sensors";
 import Simulation from "./pages/Simulation";
 import Hardware from "./pages/Hardware";
+// import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
     useEffect(() => {
@@ -20,6 +32,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <UTNavbar />
       <div className="mwrapper">
         <Routes>
