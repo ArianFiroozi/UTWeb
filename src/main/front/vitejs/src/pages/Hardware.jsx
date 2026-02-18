@@ -15,9 +15,9 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 
 import Search from '@mui/icons-material/Search';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import AddRoadIcon from '@mui/icons-material/AddRoad';
-import SquareFootIcon from '@mui/icons-material/SquareFoot';
+import PsychologyIcon from '@mui/icons-material/Psychology';
+import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
+import SettingsInputComponentIcon from '@mui/icons-material/SettingsInputComponent';
 
 import img1 from "../assets/utcar1.jpg";
 import imgdepth from "../assets/depth.jpg";
@@ -82,9 +82,10 @@ const Hardware = () => {
 
 >
 
+
   <Step active>
     <StepLabel
-      icon={<Search />}
+      icon={<PsychologyIcon />}
     >
       <Typography variant="h6" className="white">
         {t("Fill") }
@@ -128,7 +129,7 @@ const Hardware = () => {
   </Step>
 <Step active>
   <StepLabel
-    icon={<Search />}
+    icon={<DeveloperBoardIcon />}
   >
     <Typography variant="h6" className="white">
       {t("Fill") }
@@ -172,7 +173,7 @@ const Hardware = () => {
 </Step>
 <Step active>
   <StepLabel
-    icon={<Search />}
+    icon={<SettingsInputComponentIcon  />}
   >
     <Typography variant="h6" className="white">
       {t("Fill") }
