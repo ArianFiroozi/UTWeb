@@ -1,0 +1,85 @@
+/* ==========================================================================
+   Shared Page Styles
+   Common typography, layout, and component styles for project pages
+   ========================================================================== */
+
+/* -----------------------------------------------------------------------------
+   Typography
+   ----------------------------------------------------------------------------- */
+
+h2 {
+  font-weight: 700;
+  color: white;
+  font-size: 2rem;
+}
+
+p.lead {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: rgb(198, 193, 207);
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.white {
+  color: white;
+}
+
+/* -----------------------------------------------------------------------------
+   Stepper/Paper Overrides (MUI)
+   ----------------------------------------------------------------------------- */
+
+div.MuiPaper-root {
+  background-color: #b1a5bb;
+}
+
+/* -----------------------------------------------------------------------------
+   Image Styling
+   ----------------------------------------------------------------------------- */
+
+.page-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* -----------------------------------------------------------------------------
+   Video Styling
+   ----------------------------------------------------------------------------- */
+
+video {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* -----------------------------------------------------------------------------
+   Responsive Adjustments
+   ----------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  h2 {
+    text-align: center;
+    font-size: 1.75rem;
+  }
+
+  p.lead {
+    text-align: center;
+  }
+
+  .row.align-items-center {
+    flex-direction: column-reverse;
+  }
+
+  .mb-md-0 {
+    margin-bottom: 2rem !important;
+  }
+}

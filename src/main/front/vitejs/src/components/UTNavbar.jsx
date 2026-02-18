@@ -1,13 +1,8 @@
-import { useI18n } from "../i18n/I18nContext";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import { Link } from "react-router-dom";
-import "./UTNavbar.css";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import { Color } from "three";
+import { Link, useNavigate } from "react-router-dom";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { useI18n } from "../i18n/I18nContext";
+import "./UTNavbar.css";
 
 export default function UTNavbar() {
   const { t, toggleLang, lang } = useI18n();

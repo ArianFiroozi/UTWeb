@@ -1,52 +1,42 @@
-.card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-.card img {
-  object-fit: cover;
-  height: 300px;
-  width: 100%;
-}
-
-@media (max-width: 768px) {
-  .card img {
-    height: 180px !important;
-  }
-}
-.domain-header h4 {
-  color: #2c3e50;
-  letter-spacing: 0.5px;
-}
-
-.domain-header hr {
-  width: 60px;
-  border-top: 3px solid #0d6efd;
-  opacity: 1;
-}
-
+/* Member card base styles */
 .member-card {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   background: #ffffffee;
   cursor: pointer;
 }
 
-.member-card:hover {
+.member-card:hover,
+.member-card:focus-visible {
   transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
+.member-card:focus-visible {
+  outline: 3px solid #0d6efd;
+  outline-offset: 2px;
+}
 
-@media (max-width: 576px) {
-  .card img {
-    height: 160px;
+.member-card img {
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+}
+
+/* Section title styling */
+.memtitle {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .member-card img {
+    height: 180px;
   }
 }
 
-.memtitle{
-  color: rgba(255, 255, 255, 0.734) !important;
+@media (max-width: 576px) {
+  .member-card img {
+    height: 160px;
+  }
 }

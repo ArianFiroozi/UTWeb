@@ -1,52 +1,117 @@
 {
-    "home": "Home",
-    "about": "About",
-    "switch": "Farsi",
-    "welcome": "Welcome to the Home Page!",
-    "aboutText": "UTCar is a pioneering automotive research and innovation platform dedicated to developing sustainable and cutting-edge vehicle technologies. Our team of engineers and researchers work collaboratively to design innovative solutions that push the boundaries of performance, safety, and environmental responsibility.\nWe strive to create vehicles that are not only efficient and technologically advanced but also accessible and user-friendly. Through rigorous testing, community engagement, and continuous learning, UTCar aims to shape the future of transportation and inspire the next generation of automotive enthusiasts.",
-
-    "aboutenv": "Electric and eco-friendly vehicle design.",
-    "aboutsensor": "High-precision sensors and AI-driven decision making.",
-    "aboutinno": "Cutting-edge autonomous technology for safer roads.",
-    "innovation": "Innovation",
-    "env": "Sustainability",
-    "sensor": "AI & Sensors",
-    "utcar": "UTCar for Autonomous Driving",
-    "aboututcar":"something in the air",
-    "learnmore": "Learn More",
-    "address":"somewhere in Tehran, Iran",
-    "email":"email@gmail.com",
-    "phone": "0-123432",
-    "footernote":"footer note",
-    "phonestr": "Phone",
-    "addressstr": "Address",
-    "emailstr": "E-mail",
-
-    "projects":"Projects",
-    "members":"Our People",
-    "aboutTitle": "About UTCar",
-
-    "decisionmaking": "Developing intelligent decision-making algorithms for autonomous systems.",
-    "decisionmakingstr": "Decision Making",
-
-    "simulation": "Creating virtual environments to test robot behavior and system performance.",
-    "simulationstr": "Simulation",
-
-    "sensorp": "Integrating cameras, IMUs, LIDAR and other sensors for real-time data collection.",
-    "sensorstr": "Sensor Integration",
-    "hardware": "Assembling electronics, mechanical parts, and embedded systems into final robots.",
-    "hardwarestr": "Hardware",
-
-    "ourproj": "Our Projects",
-    "ourlabmem": "Our Lab Members",
-    "Current Members": "Current Members",
-    "Former Members": "Former Members",
-
-    "cvstr": "Computer Vision",
-    "cv": "Using computer vision modules to precieve the environment and make low level decisions.",
-
-    "cvTitle": "Computer Vision",
-    "cvIntro": "We design computer vision modules to percieve the environment and extract meaningful information from the sensors. Afterwards, this information is used to make both low level and high level decision making.\n Our computer vision pipeline consists of 3 modules.",
-
-    "cm" : "cm"
-  }
+  "home": "Home",
+  "about": "About",
+  "switch": "فارسی",
+  "welcome": "Welcome to the Home Page!",
+  
+  "aboutText": "UTCar is a pioneering automotive research and innovation platform dedicated to developing sustainable and cutting-edge vehicle technologies. Our team of engineers and researchers work collaboratively to design innovative solutions that push the boundaries of performance, safety, and environmental responsibility.\nWe strive to create vehicles that are not only efficient and technologically advanced but also accessible and user-friendly. Through rigorous testing, community engagement, and continuous learning, UTCar aims to shape the future of transportation and inspire the next generation of automotive enthusiasts.",
+  "aboutTitle": "About UTCar",
+  
+  "aboutenv": "Electric and eco-friendly vehicle design focusing on sustainable energy solutions and minimal environmental impact.",
+  "aboutsensor": "High-precision sensors combined with AI-driven decision making for real-time environmental awareness.",
+  "aboutinno": "Cutting-edge autonomous technology enabling safer roads through intelligent navigation and obstacle avoidance.",
+  
+  "innovation": "Innovation",
+  "env": "Sustainability",
+  "sensor": "AI & Sensors",
+  
+  "utcar": "UTCar for Autonomous Driving",
+  "aboututcar": "Pioneering the future of mobility",
+  "learnmore": "Learn More",
+  
+  "address": "Tehran, Iran",
+  "email": "contact@utcar.ir",
+  "phone": "+98-21-1234567",
+  "footernote": "UTCar Research Lab",
+  "footerTagline": "Driving innovation, shaping tomorrow's mobility.",
+  "phonestr": "Phone",
+  "addressstr": "Address",
+  "emailstr": "E-mail",
+  "copyright": "© 2026 UTCar. All rights reserved.",
+  
+  "projects": "Projects",
+  "members": "Our People",
+  "ourproj": "Our Projects",
+  "ourlabmem": "Our Lab Members",
+  "Current Members": "Current Members",
+  "Former Members": "Former Members",
+  
+  "decisionmaking": "Developing intelligent decision-making algorithms for autonomous systems that can navigate complex scenarios safely and efficiently.",
+  "decisionmakingstr": "Decision Making",
+  "decisionTitle": "Decision Making",
+  "decisionIntro": "Our decision-making module forms the brain of the autonomous system, processing sensor data and making real-time navigation choices.\nWe employ reinforcement learning, path planning algorithms, and behavior prediction models to ensure safe and efficient autonomous driving.",
+  
+  "simulation": "Creating virtual environments to test robot behavior and system performance before real-world deployment.",
+  "simulationstr": "Simulation",
+  "simulationTitle": "Simulation",
+  "simulationIntro": "Creating virtual environments to test robot behavior and system performance.\nWe build physics-based and scenario-driven simulators using CARLA, Highway-Env, and custom environments to validate algorithms before real-world deployment.",
+  
+  "sensorp": "Integrating cameras, IMUs, LIDAR and other sensors for real-time data collection and environmental perception.",
+  "sensorstr": "Sensor Integration",
+  "sensorsTitle": "Sensors & Sensor Fusion",
+  "sensorsIntro": "Integrating cameras, IMUs, LIDAR and other sensors for real-time data collection.\nWe develop calibration, synchronization and fusion pipelines to produce robust perception inputs for downstream decision-making modules.",
+  
+  "hardware": "Assembling electronics, mechanical parts, and embedded systems into final autonomous vehicles.",
+  "hardwarestr": "Hardware",
+  "hardwareTitle": "Hardware Integration",
+  "hardwareIntro": "Building the physical foundation of our autonomous systems through careful integration of mechanical and electronic components.\nOur hardware team designs custom PCBs, motor controllers, and sensor mounts to create a reliable and efficient autonomous platform.",
+  
+  "cvstr": "Computer Vision",
+  "cv": "Using computer vision modules to perceive the environment and make informed low-level decisions.",
+  "cvTitle": "Computer Vision",
+  "cvIntro": "We design computer vision modules to perceive the environment and extract meaningful information from sensors. This information drives both low-level control and high-level decision making.\nOur computer vision pipeline consists of 3 core modules for comprehensive scene understanding.",
+  
+  "cm": "cm",
+  "decisionImageAlt": "Decision Making Pipeline",
+  
+  "step": {
+    "carla": "CARLA Simulator",
+    "carlaDesc": "High-fidelity urban driving simulation with realistic physics, weather conditions, and traffic scenarios for testing autonomous driving algorithms.",
+    "carlaMulti": "Multi-Agent CARLA",
+    "carlaMultiDesc": "Training and testing decision-making algorithms in complex multi-agent scenarios with various traffic participants and challenging urban environments.",
+    "carlaSingle": "Single-Agent CARLA",
+    "carlaSingleDesc": "Focused training environment for individual agent behavior optimization and basic autonomous navigation tasks.",
+    "highway": "Highway Environment",
+    "highwayDesc": "Multi-agent highway driving scenarios for testing lane-change decisions, merging behaviors, and high-speed navigation strategies.",
+    "gym": "OpenAI Gym Integration",
+    "gymDesc": "Reinforcement learning environment integration for training and benchmarking autonomous driving agents.",
+    "fusion": "Sensor Fusion Pipeline",
+    "fusionDesc": "Multi-modal sensor fusion combining camera, LIDAR, and IMU data for robust environmental perception.",
+    "profiling": "Performance Profiling",
+    "profilingDesc": "Real-time profiling and optimization of sensor processing pipelines for embedded deployment.",
+    "stereo": "Stereo Vision",
+    "stereoDesc": "Dual-camera depth estimation for accurate 3D scene reconstruction and obstacle detection.",
+    "tof": "Time-of-Flight Sensors",
+    "tofDesc": "High-precision distance measurement for close-range obstacle detection and navigation.",
+    "yolo": "Object Detection",
+    "yoloDesc": "Real-time object detection using YOLO architecture for identifying vehicles, pedestrians, and traffic signs.",
+    "lane": "Lane Detection",
+    "laneDesc": "Robust lane marking detection for accurate path planning and lane-keeping assistance.",
+    "depth": "Depth Estimation",
+    "depthDesc": "Monocular depth estimation using deep learning for scene understanding without stereo cameras.",
+    "tracking": "Object Tracking",
+    "trackingDesc": "Multi-object tracking for maintaining consistent object identities across video frames.",
+    "rb5": "Qualcomm RB5 Platform",
+    "rb5Desc": "High-performance AI compute platform enabling on-device inference for perception and decision-making algorithms.",
+    "jetson": "NVIDIA Jetson",
+    "jetsonDesc": "GPU-accelerated edge computing platform for real-time deep learning inference and sensor processing.",
+    "esp32": "ESP32 Microcontroller",
+    "esp32Desc": "Low-power embedded controller for motor control, sensor interfacing, and real-time communication."
+  },
+  
+  "alt": {
+    "decision": "Decision Making",
+    "hardware": "Hardware Integration",
+    "computerVision": "Computer Vision",
+    "simulation": "Simulation Environment",
+    "sensors": "Sensor Array",
+    "utcarCar": "UTCar autonomous vehicle"
+  },
+  
+  "loading": "Loading",
+  "viewProfile": "View Profile",
+  "closeModal": "Close",
+  
+  "maintenanceTitle": "Website Under Maintenance",
+  "maintenanceBody": "We're improving our site. Domain migration coming soon."
+}

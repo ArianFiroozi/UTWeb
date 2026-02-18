@@ -1,51 +1,42 @@
 import { useI18n } from "../i18n/I18nContext";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Image from "react-bootstrap/Image";
-import "./projectinner.css";
-
-import Stepper from '@mui/material/Stepper';
-import Step from '@mui/material/Step';
-import StepLabel from '@mui/material/StepLabel';
-import StepContent from '@mui/material/StepContent';
-
-import Typography from '@mui/material/Typography';
-import Paper from '@mui/material/Paper';
-
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import CarCrashIcon from '@mui/icons-material/CarCrash';
-import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-
+import { Container, Row, Col, Image } from "react-bootstrap";
+import { Stepper, Step, StepLabel, StepContent, Typography, Paper } from "@mui/material";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import CarCrashIcon from "@mui/icons-material/CarCrash";
+import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
+import { motion } from "framer-motion";
 import img1 from "../assets/utcar1.jpg";
-import jsonDepthArray from "../assets/depth.json";
 import vid_carla_multi from "../assets/videos/decision-carla-multi.mp4";
 import vid_carla_single from "../assets/videos/decision-carla-single.mp4";
 import vid_highway_multi from "../assets/videos/decision-highway-multi.mp4";
-import { motion } from "framer-motion";
+import "./shared.css";
 
+const DECISION_STEPS = [
+  { labelKey: "step.carlaMulti", descKey: "step.carlaMultiDesc", icon: ArrowForwardIosIcon, video: vid_carla_multi },
+  { labelKey: "step.highway", descKey: "step.highwayDesc", icon: CarCrashIcon, video: vid_highway_multi },
+  { labelKey: "step.carlaSingle", descKey: "step.carlaSingleDesc", icon: DirectionsCarIcon, video: vid_carla_single },
+];
 
-const Decision = () => {
-  const { t, lang } = useI18n();
-  const isRtl = lang === "fa";
-  const depthMap1 = new Float32Array(jsonDepthArray);
-  
-  const intro = t("decisionIntro").split("\n").filter(p => p.trim() !== "");
-  const popVariants = {
+const popVariants = {
   hidden: { opacity: 0, y: 60, scale: 0.95 },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.6, ease: "easeOut" }
-  }
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
 };
 
+const Decision = () => {
+  const { t, lang } = useI18n();
+  const isRtl = lang === "fa";
+  const intro = t("decisionIntro").split("\n").filter((p) => p.trim() !== "");
 
   return (
     <Container className="my-5" dir={isRtl ? "rtl" : "ltr"}>
-      <hr/>
-      &nbsp;
+      <hr />
+      <div className="mb-4" />
+
       <Row className={`align-items-center ${isRtl ? "flex-col-reverse" : ""}`}>
         <Col md={6}>
           <h2 className="mb-4">{t("decisionTitle")}</h2>
@@ -58,165 +49,63 @@ const Decision = () => {
         <Col md={6} className="mb-4 mb-md-0">
           <Image
             src={img1}
-            alt="Decision Making Pipeline"
+            alt={t("alt.utcarCar")}
             fluid
             rounded
             className={`shadow-sm ${isRtl ? "img-rtl" : ""}`}
           />
         </Col>
       </Row>
-    
-    <Stepper
-  orientation="vertical"
-  sx={{
-  '& .MuiStepConnector-line': {
-    minHeight: 24,
-  },
-}}
 
->
-
-
-<Step active>
-  <StepLabel
-    icon={<ArrowForwardIosIcon />}
-  >
-    <Typography variant="h6" className="white">
-      {t("Fill") }
-    </Typography>
-  </StepLabel>
-
-  <StepContent>
-    <motion.div
-      variants={popVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: false, margin: "-80px" }}
-    >
-    <Paper
-      elevation={3}
-      sx={{
-        p: 2,
-        borderRadius: 3,
-        backgroundColor: '#ffffffe5',
-        display: 'flex',
-        flexDirection: { xs: 'column', sm: 'row' }, // Stack vertically on small screens
-        justifyContent: 'space-between',
-        alignItems: 'center',
-      }}
-    >
-      <Typography mt={2} sx={{ flex: 1, textAlign: 'left' }}>
-        {t("decisionmaking")}
-      </Typography>
-
-      
-      <video 
-        controls 
-        style={{ width: '100%', borderRadius: 10, maxWidth: '700px', margin: '1rem' }} 
+      <Stepper
+        orientation="vertical"
+        sx={{ "& .MuiStepConnector-line": { minHeight: 24 } }}
       >
-        <source src= {vid_carla_multi} type="video/mp4" />
-      </video>
-    </Paper>
-    </motion.div>
-  </StepContent>
-</Step>
-
-
-<Step active>
-  <StepLabel
-    icon={<CarCrashIcon />}
-  >
-    <Typography variant="h6" className="white">
-      {t("Fill")}
-    </Typography>
-  </StepLabel>
-
-  <StepContent>
-
-    <motion.div
-      variants={popVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: false, margin: "-80px" }}
-    >
-    <Paper
-      elevation={3}
-      sx={{
-        p: 2,
-        borderRadius: 3,
-        backgroundColor: '#ffffffe5',
-        display: 'flex',
-        flexDirection: { xs: 'column', sm: 'row' }, // Stack vertically on small screens
-        justifyContent: 'space-between',
-        alignItems: 'center',
-      }}
-    >
-      <Typography mt={2} sx={{ flex: 1, textAlign: 'left' }}>
-        {t("decisionmaking")}
-      </Typography>
-
-      
-      <video 
-        controls 
-        style={{ width: '100%', borderRadius: 10, maxWidth: '700px', margin: '1rem' }} 
-      >
-        <source src= {vid_highway_multi} type="video/mp4" />
-      </video>
-    </Paper>
-    </motion.div>
-  </StepContent>
-</Step>
-
-
-<Step active>
-  <StepLabel
-    icon={<DirectionsCarIcon />}
-  >
-    <Typography variant="h6" className="white">
-      {t("Fill")}
-    </Typography>
-  </StepLabel>
-
-  <StepContent>
-
-    <motion.div
-      variants={popVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: false, margin: "-80px" }}
-    >
-    <Paper
-      elevation={3}
-      sx={{
-        p: 2,
-        borderRadius: 3,
-        backgroundColor: '#ffffffe5',
-        display: 'flex',
-        flexDirection: { xs: 'column', sm: 'row' }, // Stack vertically on small screens
-        justifyContent: 'space-between',
-        alignItems: 'center',
-      }}
-    >
-      <Typography mt={2} sx={{ flex: 1, textAlign: 'left' }}>
-        {t("decisionmaking")}
-      </Typography>
-
-      
-      <video 
-        controls 
-        style={{ width: '100%', borderRadius: 10, maxWidth: '700px', margin: '1rem' }} 
-      >
-        <source src= {vid_carla_single} type="video/mp4" />
-      </video>
-    </Paper>
-    </motion.div>
-  </StepContent>
-</Step>
-
-</Stepper>
-
+        {DECISION_STEPS.map((step, index) => {
+          const IconComponent = step.icon;
+          return (
+            <Step key={index} active>
+              <StepLabel icon={<IconComponent />}>
+                <Typography variant="h6" className="white">
+                  {t(step.labelKey)}
+                </Typography>
+              </StepLabel>
+              <StepContent>
+                <motion.div
+                  variants={popVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false, margin: "-80px" }}
+                >
+                  <Paper
+                    elevation={3}
+                    sx={{
+                      p: 2,
+                      borderRadius: 3,
+                      backgroundColor: "#ffffffe5",
+                      display: "flex",
+                      flexDirection: { xs: "column", sm: "row" },
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Typography mt={2} sx={{ flex: 1, textAlign: "left" }}>
+                      {t(step.descKey)}
+                    </Typography>
+                    <video
+                      controls
+                      style={{ width: "100%", borderRadius: 10, maxWidth: "700px", margin: "1rem" }}
+                    >
+                      <source src={step.video} type="video/mp4" />
+                    </video>
+                  </Paper>
+                </motion.div>
+              </StepContent>
+            </Step>
+          );
+        })}
+      </Stepper>
     </Container>
-    // </div>
   );
 };
 

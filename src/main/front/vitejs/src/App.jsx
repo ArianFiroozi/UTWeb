@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import UTNavbar from "./components/UTNavbar";
 import UTFooter from "./components/UTFooter";
 import Home from "./pages/Home";
@@ -7,13 +8,10 @@ import Decision from "./pages/Decision";
 import Projects from "./pages/projects";
 import People from "./pages/people";
 import ComputerVision from "./pages/ComputerVision";
-import React, { useEffect } from "react";
-import "./App.css"
 import Sensors from "./pages/Sensors";
 import Simulation from "./pages/Simulation";
 import Hardware from "./pages/Hardware";
-// import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import "./App.css";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -25,16 +23,25 @@ function ScrollToTop() {
   return null;
 }
 
+function SkipLink() {
+  return (
+    <a href="#main-content" className="skip-link">
+      Skip to main content
+    </a>
+  );
+}
+
 function App() {
-    useEffect(() => {
+  useEffect(() => {
     document.title = "UTCar";
   }, []);
 
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <SkipLink />
       <UTNavbar />
-      <div className="mwrapper">
+      <main id="main-content" className="mwrapper">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -45,13 +52,12 @@ function App() {
           <Route path="/projects/sensor-integration" element={<Sensors />} />
           <Route path="/projects/simulation" element={<Simulation />} />
           <Route path="/projects/hardware" element={<Hardware />} />
-
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-      </div>
+      </main>
       <UTFooter />
     </BrowserRouter>
   );
 }
 
-export default App
+export default App;

@@ -69,7 +69,7 @@ export default function Projects() {
               
               <img
                 src={img1}
-                alt="Decision Making"
+                alt={t("alt.decision")}
                 style={{ width: "100%", borderRadius: "10px" }}
               />
 
@@ -99,7 +99,7 @@ export default function Projects() {
             <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "end"}}>
               <img
                 src={img4}
-                alt="Hardware"
+                alt={t("alt.hardware")}
                 style={{ width: "100%", borderRadius: "10px" }}
               />
               <Typography variant="h6" mt={2}>
@@ -128,7 +128,7 @@ export default function Projects() {
             <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "start"}}>
               <img
                 src={img1}
-                alt="ComputerVision"
+                alt={t("alt.computerVision")}
                 style={{ width: "100%", borderRadius: "10px" }}
               />
               <Typography variant="h6" mt={2}>
@@ -162,7 +162,7 @@ export default function Projects() {
             <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "end"}}>
               <img
                 src={img2}
-                alt="Simulation"
+                alt={t("alt.simulation")}
                 style={{ width: "100%", borderRadius: "10px" }}
               />
               <Typography variant="h6" mt={2}>
@@ -191,7 +191,7 @@ export default function Projects() {
             <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "start"}}>
               <img
                 src={img3}
-                alt="Sensors"
+                alt={t("alt.sensors")}
                 style={{ width: "100%", borderRadius: "10px" }}
               />
               <Typography variant="h6" mt={2}>

@@ -49,13 +49,14 @@ const Home = () => {
   // const notify = () => toast("This website is bad");
   useEffect(() => {
     const notify = () => toast.warning(
-      <>This website is under maintenance! <br />
-      We will move to a different domain once the work is done.
-      </>, {style:
-        {width:"350px",
-          textAlign:"center"
-        }
-      });
+      <>
+        {t("maintenanceTitle")} <br />
+        {t("maintenanceBody")}
+      </>,
+      {
+        style: { width: "350px", textAlign: "center" },
+      }
+    );
 
     notify();
   }, [])
