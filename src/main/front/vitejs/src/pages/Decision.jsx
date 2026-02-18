@@ -97,7 +97,7 @@ const Decision = () => {
       variants={popVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: false, margin: "-80px" }}
     >
     <Paper
       elevation={3}
@@ -143,7 +143,7 @@ const Decision = () => {
       variants={popVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: false, margin: "-80px" }}
     >
     <Paper
       elevation={3}
@@ -189,7 +189,7 @@ const Decision = () => {
       variants={popVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: false, margin: "-80px" }}
     >
     <Paper
       elevation={3}
