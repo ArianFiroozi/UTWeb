@@ -91,7 +91,7 @@
     "depthDesc": "Monocular depth estimation using deep learning for scene understanding without stereo cameras.",
     "tracking": "Object Tracking",
     "trackingDesc": "Multi-object tracking for maintaining consistent object identities across video frames.",
-    "rb5": "Qualcomm RB5 Platform",
+    "rb5": "Raspberry Pi 5",
     "rb5Desc": "High-performance AI compute platform enabling on-device inference for perception and decision-making algorithms.",
     "jetson": "NVIDIA Jetson",
     "jetsonDesc": "GPU-accelerated edge computing platform for real-time deep learning inference and sensor processing.",

@@ -89,7 +89,7 @@ const Decision = () => {
                       alignItems: "center",
                     }}
                   >
-                    <Typography mt={2} sx={{ flex: 1, textAlign: "left" }}>
+                    <Typography mt={2} sx={{ flex: 1, textAlign: isRtl ? "right" : "left" }}>
                       {t(step.descKey)}
                     </Typography>
                     <video

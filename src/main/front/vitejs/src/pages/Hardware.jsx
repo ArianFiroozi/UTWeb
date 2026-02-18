@@ -66,7 +66,7 @@ const Hardware = () => {
           return (
             <Step key={index} active>
               <StepLabel icon={<IconComponent />}>
-                <Typography variant="h6" className="white">
+                <Typography variant="h6" className="white" >
                   {t(step.labelKey)}
                 </Typography>
               </StepLabel>
@@ -89,7 +89,7 @@ const Hardware = () => {
                       alignItems: "center",
                     }}
                   >
-                    <Typography mt={2} sx={{ flex: 1, textAlign: "left" }}>
+                    <Typography mt={2} sx={{ flex: 1, textAlign: isRtl ? "right" : "left" }}>
                       {t(step.descKey)}
                     </Typography>
                     <img
