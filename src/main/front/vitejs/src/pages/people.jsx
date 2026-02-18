@@ -9,6 +9,10 @@ import sobhan from "../assets/people/sobhan.jpg"
 import erfan from "../assets/people/erfan.jpg"
 import sepehr_jam from "../assets/people/sepehr_jam.jpg"
 import sepehr_baz from "../assets/people/sepehr_baz.jpg"
+import bardia from "../assets/people/bardia.jpg"
+import mahsa from "../assets/people/mahsa.jpg"
+import hanita from "../assets/people/hanita.jpg"
+
 import "./people.css"
 
 const members = [
@@ -63,52 +67,52 @@ const members = [
       {
         name: "Mohammad Reza M. Hashemi",
         role: "AI Researcher",
-        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+        photo: "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
       },
       {
         name: "Amirhossein",
         role: "Researcher",
-        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+        photo: "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
       },
       {
-        name: "Hanita",
+        name: "Hanita Nik Nasab",
         role: "Researcher",
-        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+        photo: hanita
       },
       {
         name: "Amirreza Kaffashan",
         role: "Researcher",
-        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+        photo: "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
       },
       {
         name: "Sana Sabeti",
         role: "Researcher",
-        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+        photo: "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
       },
       {
         name: "Bardia Khalafi",
         role: "Researcher",
-        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+        photo: bardia
       },
       {
         name: "Behrad Elmi",
         role: "Researcher",
-        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+        photo: "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
       },
       {
         name: "Sara Gity",
         role: "Hardware",
-        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+        photo: "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
       },
       {
         name: "Mahsa Aghdam",
         role: "Web",
-        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+        photo: mahsa
       },
       {
         name: "Mohammadreza Vali",
         role: "AI Researcher",
-        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZWaU1oigEyM105ojAj70b6zAK-lLbht-ZQ&s"
+        photo: "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
       },
     ]
   }

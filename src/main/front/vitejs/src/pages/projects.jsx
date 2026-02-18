@@ -125,7 +125,7 @@ export default function Projects() {
 
           <TimelineContent sx={{ py: '12px', px: 2 }}>
           <Link className="nav-link custom-link" to="/projects/cv">
-            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "end"}}>
+            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "start"}}>
               <img
                 src={img1}
                 alt="ComputerVision"
@@ -180,7 +180,7 @@ export default function Projects() {
         <TimelineItem>
           <TimelineSeparator>
             <TimelineConnector />
-            <TimelineDot color="primary" variant="outlined">
+            <TimelineDot color="primary">
               <SensorsIcon />
             </TimelineDot>
             <TimelineConnector />
