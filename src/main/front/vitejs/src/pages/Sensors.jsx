@@ -114,6 +114,13 @@ const Sensors = () => {
                     <Typography mt={2} sx={{ flex: 1, textAlign: isRtl ? "right" : "left" }}>
                       {t(step.descKey)}
                     </Typography>
+                    <div
+                      style={{
+                        flex: 1,
+                        display: "flex",
+                        justifyContent: "center"
+                      }}
+                    >
                     <img
                       src={step.image}
                       style={{
@@ -125,6 +132,7 @@ const Sensors = () => {
                       }}
                       alt={t(step.titleKey)}
                     />
+                    </div>
                   </Paper>
                 </motion.div>
               </StepContent>

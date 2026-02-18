@@ -92,12 +92,22 @@ const Decision = () => {
                     <Typography mt={2} sx={{ flex: 1, textAlign: isRtl ? "right" : "left" }}>
                       {t(step.descKey)}
                     </Typography>
+                    
+                    <div
+                      style={{
+                        flex: 1,
+                        display: "flex",
+                        justifyContent: "center",
+                        padding: "1rem"
+                      }}
+                    >
                     <video
                       controls
                       style={{ width: "100%", borderRadius: 10, maxWidth: "700px", margin: "1rem" }}
                     >
                       <source src={step.video} type="video/mp4" />
                     </video>
+                    </div>
                   </Paper>
                 </motion.div>
               </StepContent>
