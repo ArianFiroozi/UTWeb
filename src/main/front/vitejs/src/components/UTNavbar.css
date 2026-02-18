@@ -14,6 +14,28 @@
 .fourth-color {
 	background: #e3e3e3;
 }
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.footer-contact-item a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .footer-contact-item {
+    justify-content: flex-end;
+  }
+
+  [dir="rtl"] .footer-contact-item {
+    justify-content: flex-start;
+  }
+}
 
 .ut-navbar {
   position: fixed;
