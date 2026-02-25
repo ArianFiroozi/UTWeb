@@ -64,15 +64,31 @@ const ComputerVision = () => {
     switch (media.type) {
       case "video":
         return (
+          <div
+            style={{
+              flex: 1,
+              display: "flex",
+              justifyContent: "center",
+              padding: "1rem"
+            }}
+          >
           <video
             controls
             style={{ width: "100%", borderRadius: 10, maxWidth: "700px", margin: "1rem" }}
           >
             <source src={media.src} type="video/mp4" />
           </video>
+          </div>
         );
       case "depth":
         return (
+          <div
+            style={{
+              flex: 1,
+              display: "flex",
+              justifyContent: "center"
+            }}
+          >
           <DepthImage
             imageSrc={media.src}
             depthData={media.depthData}
@@ -84,15 +100,25 @@ const ComputerVision = () => {
               marginTop: "1rem"
             }}
           />
+          </div>
         );
       case "image":
       default:
         return (
+          <div
+                      style={{
+                        flex: 1,
+                        display: "flex",
+                        justifyContent: "center",
+                        padding: "1rem"
+                      }}
+                    >
           <img
             src={media.src}
             style={{ width: "100%", borderRadius: 10, maxWidth: "500px", margin: "1rem" }}
             alt={altText}
           />
+          </div>
         );
     }
   };

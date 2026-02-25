@@ -92,6 +92,14 @@ const Hardware = () => {
                     <Typography mt={2} sx={{ flex: 1, textAlign: isRtl ? "right" : "left" }}>
                       {t(step.descKey)}
                     </Typography>
+                    <div
+                      style={{
+                        flex: 1,
+                        display: "flex",
+                        justifyContent: "center",
+                        padding: "1rem"
+                      }}
+                    >
                     <img
                       src={step.image}
                       alt={t(step.labelKey)}
@@ -103,6 +111,7 @@ const Hardware = () => {
                         backgroundColor: step.bgWhite ? "white" : "transparent",
                       }}
                     />
+                    </div>
                   </Paper>
                 </motion.div>
               </StepContent>
