@@ -14,7 +14,8 @@ import { useEffect } from "react";
 import { OrbitControls, Environment } from "@react-three/drei";
 import {ToastContainer, Zoom, toast} from "react-toastify";
 import { useGLTF } from "@react-three/drei";
-import utcar from "../assets/utcarClean.glb"
+// import utcar from "../assets/utcarClean.glb"
+import utcar from "../assets/UTCar.glb"
 import { Html, useProgress } from "@react-three/drei";
 import { Suspense } from "react";
 
