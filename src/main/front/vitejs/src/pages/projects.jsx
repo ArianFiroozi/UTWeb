@@ -19,10 +19,11 @@ import SensorsIcon from '@mui/icons-material/Sensors';
 import MemoryIcon from '@mui/icons-material/Memory';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 
-import img1 from "../assets/utcar1.png";
-import img2 from "../assets/utcar2.png";
-import img3 from "../assets/utcar3.png";
-import img4 from "../assets/utcar4.png";
+import imghard from "../assets/rb5.jpg";
+import imgcv from "../assets/yolo.jpg";
+import imgsim from "../assets/utcar3.png";
+import imgsen from "../assets/utcar1.png";
+import imgdm from "../assets/utcar4.png";
 
 export default function Projects() {
     const { t, lang } = useI18n();
@@ -68,7 +69,7 @@ export default function Projects() {
                 >
               
               <img
-                src={img1}
+                src={imgdm}
                 alt={t("alt.decision")}
                 style={{ width: "100%", borderRadius: "10px" }}
               />
@@ -98,7 +99,7 @@ export default function Projects() {
             <Link className="nav-link custom-link" to="/projects/hardware">
             <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "end"}}>
               <img
-                src={img4}
+                src={imghard}
                 alt={t("alt.hardware")}
                 style={{ width: "100%", borderRadius: "10px" }}
               />
@@ -127,7 +128,7 @@ export default function Projects() {
           <Link className="nav-link custom-link" to="/projects/cv">
             <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "start"}}>
               <img
-                src={img1}
+                src={imgcv}
                 alt={t("alt.computerVision")}
                 style={{ width: "100%", borderRadius: "10px" }}
               />
@@ -161,7 +162,7 @@ export default function Projects() {
             <Link className="nav-link custom-link" to="/projects/simulation">
             <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "end"}}>
               <img
-                src={img2}
+                src={imgsim}
                 alt={t("alt.simulation")}
                 style={{ width: "100%", borderRadius: "10px" }}
               />
@@ -190,7 +191,7 @@ export default function Projects() {
             <Link className="nav-link custom-link" to="/projects/sensor-integration">
             <Paper elevation={3} sx={{ p: 2, borderRadius: 3 , backgroundColor: '#ffffffe5', textAlign: "start"}}>
               <img
-                src={img3}
+                src={imgsen}
                 alt={t("alt.sensors")}
                 style={{ width: "100%", borderRadius: "10px" }}
               />
