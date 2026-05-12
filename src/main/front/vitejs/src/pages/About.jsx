@@ -1,6 +1,6 @@
 import { useI18n } from "../i18n/I18nContext";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import img1 from "../assets/utcar1.jpg";
+import img1 from "../assets/utcar1.png";
 import "./shared.css";
 
 const About = () => {

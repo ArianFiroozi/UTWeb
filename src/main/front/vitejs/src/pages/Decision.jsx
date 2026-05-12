@@ -5,7 +5,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import CarCrashIcon from "@mui/icons-material/CarCrash";
 import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import { motion } from "framer-motion";
-import img1 from "../assets/utcar1.jpg";
+import img1 from "../assets/utcar1.png";
 import vid_carla_multi from "../assets/videos/decision-carla-multi.mp4";
 import vid_carla_single from "../assets/videos/decision-carla-single.mp4";
 import vid_highway_multi from "../assets/videos/decision-highway-multi.mp4";

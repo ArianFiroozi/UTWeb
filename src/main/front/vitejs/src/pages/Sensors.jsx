@@ -8,7 +8,7 @@ import {
   Straighten as StraightenIcon
 } from "@mui/icons-material";
 import { motion } from "framer-motion";
-import img1 from "../assets/utcar1.jpg";
+import img1 from "../assets/utcar1.png";
 import fusepipe from "../assets/fusionpipe.png";
 import "./shared.css";
 

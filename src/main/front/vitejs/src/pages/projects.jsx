@@ -19,7 +19,7 @@ import SensorsIcon from '@mui/icons-material/Sensors';
 import MemoryIcon from '@mui/icons-material/Memory';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 
-import img1 from "../assets/utcar1.jpg";
+import img1 from "../assets/utcar1.png";
 import img2 from "../assets/utcar2.png";
 import img3 from "../assets/utcar3.png";
 import img4 from "../assets/utcar4.png";

@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { Card, Container, Row, Col, Button, Carousel } from "react-bootstrap";
 import { LightningFill, CpuFill, LeafFill } from "react-bootstrap-icons";
 import { useI18n } from "../i18n/I18nContext";
-import img1 from "../assets/utcar1.jpg";
+import img1 from "../assets/utcar1.png";
 import img2 from "../assets/utcar2.png";
 import img3 from "../assets/utcar3.png";
 import img4 from "../assets/utcar4.png";

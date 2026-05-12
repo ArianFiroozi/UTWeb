@@ -3,7 +3,7 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import { Stepper, Step, StepLabel, StepContent, Typography, Paper } from "@mui/material";
 import { Science as ScienceIcon, ViewInAr as ViewInArIcon, SmartToy as SmartToyIcon } from "@mui/icons-material";
 import { motion } from "framer-motion";
-import img1 from "../assets/utcar1.jpg";
+import img1 from "../assets/utcar1.png";
 import "./shared.css";
 
 const popVariants = {

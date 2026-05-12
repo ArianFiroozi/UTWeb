@@ -5,7 +5,7 @@ import PsychologyIcon from "@mui/icons-material/Psychology";
 import DeveloperBoardIcon from "@mui/icons-material/DeveloperBoard";
 import SettingsInputComponentIcon from "@mui/icons-material/SettingsInputComponent";
 import { motion } from "framer-motion";
-import img1 from "../assets/utcar1.jpg";
+import img1 from "../assets/utcar1.png";
 import rb5 from "../assets/rb5.jpg";
 import jn from "../assets/jn.png";
 import esp32 from "../assets/esp32.png";

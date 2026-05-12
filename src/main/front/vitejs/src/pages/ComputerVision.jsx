@@ -9,7 +9,7 @@ import {
 } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import DepthImage from "./DepthImage.jsx";
-import img1 from "../assets/utcar1.jpg";
+import img1 from "../assets/utcar1.png";
 import imgdepth from "../assets/depth.jpg";
 import jsonDepthArray from "../assets/depth.json";
 import vid_test1 from "../assets/videos/test1.mp4";
