@@ -3,6 +3,24 @@
   "about": "About",
   "switch": "فارسی",
   "welcome": "Welcome to the Home Page!",
+
+  "gallery": "Gallery",
+  "all": "All",
+
+  "lab": "Lab",
+  "events": "Events",
+  "tests": "Tests",
+
+  "assembling_car": "Assembling the Car",
+  "lab_meeting": "Lab Meeting",
+  "last_day_1403": "Last Day of 1403",
+  "empty_lab": "Lab",
+
+  "first_field_test": "First Field Test",
+  "vision_field_test": "Vision Field Test",
+  "lane_detection_test": "Lane Detection Test",
+
+  "video_not_supported": "Your browser does not support the video tag.",
   
   "aboutText": "UTCar is a pioneering automotive research and innovation platform dedicated to developing sustainable and cutting-edge vehicle technologies. Our team of engineers and researchers work collaboratively to design innovative solutions that push the boundaries of performance, safety, and environmental responsibility.\nWe strive to create vehicles that are not only efficient and technologically advanced but also accessible and user-friendly. Through rigorous testing, community engagement, and continuous learning, UTCar aims to shape the future of transportation and inspire the next generation of automotive enthusiasts.",
   "aboutTitle": "About UTCar",

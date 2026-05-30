@@ -11,6 +11,7 @@ import ComputerVision from "./pages/ComputerVision";
 import Sensors from "./pages/Sensors";
 import Simulation from "./pages/Simulation";
 import Hardware from "./pages/Hardware";
+import Gallery from "./pages/Gallery";
 import "./App.css";
 
 function ScrollToTop() {
@@ -47,6 +48,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/people" element={<People />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/projects/decision-making" element={<Decision />} />
           <Route path="/projects/cv" element={<ComputerVision />} />
           <Route path="/projects/sensor-integration" element={<Sensors />} />

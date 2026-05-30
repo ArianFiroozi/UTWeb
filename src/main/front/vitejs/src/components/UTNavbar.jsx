@@ -102,6 +102,9 @@ export default function UTNavbar() {
             <Link className="nav-link custom-link" to="/people" onClick={() => setExpanded(false)}>
               {t("members")}
             </Link>
+            <Link className="nav-link custom-link" to="/gallery" onClick={() => setExpanded(false)}>
+              {t("gallery")}
+            </Link>
             <Link className="nav-link custom-link" to="/about" onClick={() => setExpanded(false)}>
               {t("about")}
             </Link>
