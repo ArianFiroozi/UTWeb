@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Modal } from "react-bootstrap";
 import { useI18n } from "../i18n/I18nContext";
-import "./gallery.css";
+import "./Gallery.css";
 
 // Image imports
 import img1 from "../assets/utcar4.png";
