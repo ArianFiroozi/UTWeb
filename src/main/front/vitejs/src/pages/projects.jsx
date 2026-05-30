@@ -19,11 +19,11 @@ import SensorsIcon from '@mui/icons-material/Sensors';
 import MemoryIcon from '@mui/icons-material/Memory';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 
-import imghard from "../assets/rb5.jpg";
-import imgcv from "../assets/yolo.jpg";
-import imgsim from "../assets/utcar3.png";
-import imgsen from "../assets/utcar1.png";
-import imgdm from "../assets/utcar4.png";
+import imghard from "../assets/icons/hw.png";
+import imgcv from "../assets/icons/cv.png";
+import imgsim from "../assets/icons/sim.png";
+import imgsen from "../assets/icons/sensor.png";
+import imgdm from "../assets/icons/dm.png";
 
 export default function Projects() {
     const { t, lang } = useI18n();

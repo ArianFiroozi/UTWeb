@@ -46,10 +46,10 @@
   "simulationTitle": "Simulation",
   "simulationIntro": "Creating virtual environments to test robot behavior and system performance.\nWe build physics-based and scenario-driven simulators using CARLA, Highway-Env, and custom environments to validate algorithms before real-world deployment.",
   
-  "sensorp": "Integrating cameras, IMUs, LIDAR and other sensors for real-time data collection and environmental perception.",
+  "sensorp": "Integrating cameras, IMUs, Light Distance and other sensors for real-time data collection and environmental perception.",
   "sensorstr": "Sensor Integration",
   "sensorsTitle": "Sensors & Sensor Fusion",
-  "sensorsIntro": "Integrating cameras, IMUs, LIDAR and other sensors for real-time data collection.\nWe develop calibration, synchronization and fusion pipelines to produce robust perception inputs for downstream decision-making modules.",
+  "sensorsIntro": "Integrating cameras, IMUs, Light Distance and other sensors for real-time data collection.\nWe develop calibration, synchronization and fusion pipelines to produce robust perception inputs for downstream decision-making modules.",
   
   "hardware": "Assembling electronics, mechanical parts, and embedded systems into final autonomous vehicles.",
   "hardwarestr": "Hardware",
@@ -76,7 +76,7 @@
     "gym": "OpenAI Gym Integration",
     "gymDesc": "Reinforcement learning environment integration for training and benchmarking autonomous driving agents.",
     "fusion": "Sensor Fusion Pipeline",
-    "fusionDesc": "Multi-modal sensor fusion combining camera, LIDAR, and IMU data for robust environmental perception.",
+    "fusionDesc": "Multi-modal sensor fusion combining camera, Light Distance, and IMU data for robust environmental perception.",
     "profiling": "Performance Profiling",
     "profilingDesc": "Real-time profiling and optimization of sensor processing pipelines for embedded deployment.",
     "stereo": "Stereo Vision",
