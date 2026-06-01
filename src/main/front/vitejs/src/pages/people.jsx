@@ -26,13 +26,15 @@ const MEMBERS = [
       { name: "Arian Firoozi", role: "AI - Decision Making", photo: "https://arianfiroozi.github.io/assets/img/prof_pic-480.webp" },
       { name: "Sobhan Abedi", role: "AI - Decision Making", photo: sobhan },
       { name: "Erfan Daraee", role: "Hardware - CV", photo: erfan },
+      { name: "Mani Hosseini", role: "AI - Decision Making", photo: "https://media.licdn.com/dms/image/v2/D4E03AQGrt7Z4ifdEOw/profile-displayphoto-scale_400_400/B4EZx6ENfzIEAk-/0/1771574465789?e=1781740800&v=beta&t=6qpH_nLLLV-3DKqjwdaUzpjBq-yTHCSACvO96G3pgxE" },
+      { name: "Mahdi Yari", role: "AI - Decision Making", photo: "https://media.licdn.com/dms/image/v2/D5603AQHYP0zWds6ONw/profile-displayphoto-scale_400_400/B56ZmahJjaKMAg-/0/1759234007330?e=1781740800&v=beta&t=nd8EcybfoG11y-Zca5GeTDV2LpyAdy6rj1DTzmx1dX8" },
     ]
   },
   {
     sectionKey: "Former Members",
     people: [
       { name: "Mohammad Reza M. Hashemi", role: "AI Researcher", photo: PLACEHOLDER_IMAGE },
-      { name: "Amirhossein", role: "Researcher", photo: PLACEHOLDER_IMAGE },
+      { name: "Amirhossein Kahrobaeian", role: "Researcher", photo: PLACEHOLDER_IMAGE },
       { name: "Hanita Nik Nasab", role: "Researcher", photo: hanita },
       { name: "Amirreza Kaffashan", role: "Researcher", photo: PLACEHOLDER_IMAGE },
       { name: "Sana Sabeti", role: "Researcher", photo: PLACEHOLDER_IMAGE },

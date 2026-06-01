@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Modal } from "react-bootstrap";
 import { useI18n } from "../i18n/I18nContext";
 import "./Gallery.css";
-
+import { useLocation } from "react-router-dom";
 // Image imports
 import img1 from "../assets/utcar4.png";
 import img2 from "../assets/utcar2.png";
@@ -105,7 +105,12 @@ function GalleryCard({ item, onClick, t }) {
 
 export default function Gallery() {
   const [selected, setSelected] = useState(null);
-  const [filter, setFilter] = useState("all");
+  const location = useLocation();
+
+  const queryParams = new URLSearchParams(location.search);
+  const initialFilter = queryParams.get("filter");
+
+  const [filter, setFilter] = useState(initialFilter || "all");
 
   const { lang, t } = useI18n();
   const isRtl = lang === "fa";

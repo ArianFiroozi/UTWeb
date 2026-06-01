@@ -13,6 +13,9 @@
   );
   gap: 20px;
 }
+.btn-outline-dark {
+  color: #e1e1e1f8;
+}
 
 .gallery-card {
   position: relative;

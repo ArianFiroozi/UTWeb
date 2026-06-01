@@ -44,6 +44,15 @@ footer p {
   display: block;
 }
 
+.btn-secondary{
+  background-color:rgb(187, 75, 0);
+  border-color: rgb(154, 63, 2);
+}
+
+.btn-secondary:hover{
+  background-color:rgb(167, 67, 0);
+}
+
 .containerw {
   width: 100%;
   object-fit: cover;

@@ -141,21 +141,35 @@ const Home = () => {
       <Container className="my-5" >
         <Row className="g-4">
           {flashcards.map((card, idx) => (
-            <Col key={idx} md={4}>
-              <Card className="h-100 text-center shadow-sm d-flex flex-column" style={{ backgroundColor: '#ffffffe5' }}>
-                <Card.Body className="d-flex flex-column">
-                  <Card.Title className="d-flex align-items-center justify-content-center">
-                    <span className="me-2">{card.icon}</span>
-                    {card.title}
-                  </Card.Title>
-                  <Card.Text className="mb-4">{card.text}</Card.Text>
-                  <div className="mt-auto">
-                    <Button variant="primary" onClick={() => navigate("/projects")}>{t("learnmore")}</Button>
-                  </div>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
+  <Col key={idx} md={4}>
+    <Card className="h-100 text-center shadow-sm d-flex flex-column" style={{ backgroundColor: '#ffffffe5' }}>
+      <Card.Body className="d-flex flex-column">
+        <Card.Title className="d-flex align-items-center justify-content-center">
+          <span className="me-2">{card.icon}</span>
+          {card.title}
+        </Card.Title>
+        <Card.Text className="mb-4">{card.text}</Card.Text>
+        <div className="mt-auto">
+          <Button
+            variant={idx === flashcards.length - 2
+              ? "secondary"
+              : "primary"}
+            onClick={() =>
+              navigate(
+                idx === flashcards.length - 2
+                  ? "/gallery?filter=tests"
+                  : "/projects"
+              )
+            }          >
+            {idx === flashcards.length - 2
+              ? t("checkout")
+              : t("learnmore")}
+          </Button>
+        </div>
+      </Card.Body>
+    </Card>
+  </Col>
+))}
         </Row>
       </Container>
         
