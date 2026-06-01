@@ -18,6 +18,7 @@ import { useGLTF } from "@react-three/drei";
 import utcar from "../assets/UTCar.glb"
 import { Html, useProgress } from "@react-three/drei";
 import { Suspense } from "react";
+import { ChevronDown } from "react-bootstrap-icons";
 
 function Loader() {
   const { progress } = useProgress();
@@ -49,6 +50,34 @@ const Home = () => {
   const [show, hide] = useState(true);
   // const notify = () => toast("This website is bad");
   const idRef = useRef(null);
+
+  const carRef = useRef(null);
+const [showScrollHint, setShowScrollHint] = useState(true);
+
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      setShowScrollHint(!entry.isIntersecting);
+    },
+    {
+      threshold: 0.3, // car section is 30% visible
+    }
+  );
+
+  if (carRef.current) {
+    observer.observe(carRef.current);
+  }
+
+  return () => observer.disconnect();
+}, []);
+
+const scrollToCar = () => {
+  carRef.current?.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+};
+
   useEffect(() => {
       if (idRef.current) {
         toast.dismiss(idRef.current);
@@ -172,16 +201,16 @@ const Home = () => {
 ))}
         </Row>
       </Container>
-        
-    <div
+        <div
+  ref={carRef}
   style={{
     width: "100vw",
     maxWidth: "1000px",
-    aspectRatio: "1 / 1", // or 16 / 9
+    aspectRatio: "1 / 1",
     margin: "0 auto",
     overflow: "hidden",
   }}
->
+  >
   <Canvas
     shadows
     camera={{ position: [5, 5, 2], fov: 30 }}
@@ -196,6 +225,11 @@ const Home = () => {
       </Suspense>
   </Canvas>
 </div>
+{showScrollHint && (
+  <div className="scroll-indicator" onClick={scrollToCar}>
+    <ChevronDown size={40} />
+  </div>
+)}
     </div>
   );
 };
