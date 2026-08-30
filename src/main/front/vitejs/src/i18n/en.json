@@ -19,6 +19,8 @@
   "first_field_test": "First Field Test",
   "vision_field_test": "Vision Field Test",
   "lane_detection_test": "Lane Detection Test",
+  "lane_detection_test2": "Second Lane Detection Test, Better Lane Following",
+  "dagger_test": "AI Simulated Test using DAGGER and RL",
 
   "video_not_supported": "Your browser does not support the video tag.",
   

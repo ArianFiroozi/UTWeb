@@ -14,11 +14,15 @@ import img5 from "../assets/gallery/assembling2.jpg";
 import vid1 from "../assets/gallery/first test.mp4";
 import vid2 from "../assets/videos/test1.mp4";
 import vid3 from "../assets/videos/lanedetection.mp4";
+import vid4 from "../assets/videos/lanetest.mp4";
+import vid5 from "../assets/videos/dagger.mp4";
 
 // Video thumbnails
 import thumb1 from "../assets/thumbnails/first-thumb.jpg";
 import thumb2 from "../assets/thumbnails/lane-thumb.jpg";
 import thumb3 from "../assets/thumbnails/test1-thumb.jpg";
+import thumb4 from "../assets/thumbnails/lanetest-thumb.png";
+import thumb5 from "../assets/thumbnails/dagger-thumb.png";
 
 const GALLERY = [
   {
@@ -71,6 +75,20 @@ const GALLERY = [
     categoryKey: "tests",
     src: vid3,
     thumbnail: thumb2,
+  },
+  {
+    type: "video",
+    titleKey: "lane_detection_test2",
+    categoryKey: "tests",
+    src: vid4,
+    thumbnail: thumb4,
+  },
+  {
+    type: "video",
+    titleKey: "dagger_test",
+    categoryKey: "tests",
+    src: vid5,
+    thumbnail: thumb5,
   },
 ];
 
