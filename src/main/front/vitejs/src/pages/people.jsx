@@ -11,6 +11,8 @@ import bardia from "../assets/people/bardia.jpg";
 import mahsa from "../assets/people/mahsa.jpg";
 import hanita from "../assets/people/hanita.jpg";
 import faezeh from "../assets/people/faezeh.jpg"
+import mahdiyari from "../assets/people/mahdiyari.jpg";
+import mani from "../assets/people/mani.png"
 import "./people.css";
 
 const PLACEHOLDER_IMAGE = "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png";
@@ -25,10 +27,10 @@ const MEMBERS = [
       { name: "M. Sepehr Bazargan", role: "Qt Developer", photo: sepehr_baz },
       { name: "Sepehr Jamali", role: "Qt Developer", photo: sepehr_jam },
       { name: "Faezeh Misaghi", role: "Hardware Engineer", photo: faezeh },
-      { name: "Arian Firoozi", role: "AI - Decision Making", photo: "https://arianfiroozi.github.io/assets/img/prof_pic-480.webp" },
       { name: "Sobhan Abedi", role: "AI - Decision Making", photo: sobhan },
-      { name: "Mani Hosseini", role: "AI - Decision Making", photo: "https://media.licdn.com/dms/image/v2/D4E03AQGrt7Z4ifdEOw/profile-displayphoto-scale_400_400/B4EZx6ENfzIEAk-/0/1771574465789?e=1781740800&v=beta&t=6qpH_nLLLV-3DKqjwdaUzpjBq-yTHCSACvO96G3pgxE" },
-      { name: "Mahdi Yari", role: "AI - Decision Making", photo: "https://media.licdn.com/dms/image/v2/D5603AQHYP0zWds6ONw/profile-displayphoto-scale_400_400/B56ZmahJjaKMAg-/0/1759234007330?e=1781740800&v=beta&t=nd8EcybfoG11y-Zca5GeTDV2LpyAdy6rj1DTzmx1dX8" },
+      { name: "Mani Hosseini", role: "AI - Decision Making", photo: mani },
+      { name: "Mahdi Yari", role: "AI - Decision Making", photo: mahdiyari },
+      { name: "Arian Firoozi", role: "AI - Decision Making", photo: "https://arianfiroozi.github.io/assets/img/prof_pic-480.webp" },
     ]
   },
   {
@@ -75,6 +77,9 @@ function MemberCard({ person, onClick }) {
 
 function MemberModal({ person, onClose }) {
   if (!person) return null;
+  var text = person.role;
+  if (person.name == "Arian Firoozi")
+    text = "I am not working anymore but since I made the website I will be in the list forever. Sorry :))"
 
   return (
     <Modal show={!!person} onHide={onClose} centered size="lg">
@@ -88,7 +93,7 @@ function MemberModal({ person, onClose }) {
           style={{ width: "100%", maxHeight: "70vh", borderRadius: "12px", objectFit: "contain" }}
         />
         <h2 className="mt-4" style={{ color: "#1f1f1fe5" }}>{person.name}</h2>
-        <p className="text-muted">{person.role}</p>
+        <p className="text-muted">{text}</p>
       </Modal.Body>
     </Modal>
   );
